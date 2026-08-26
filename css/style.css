@@ -199,3 +199,61 @@ button:hover {
     transform: scale(0.97);
 }
 
+#cardapio {
+    width: 100%;
+    height: 100vh;
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--branco);
+
+
+}
+
+.texto-cardapio {
+    width: 25%;
+    height: 65px;
+    /* border: 1px aqua solid; */
+    text-align: center;
+    font-family: var(--fonte-texto);
+}
+
+.texto-cardapio h1 {
+    font-family: var(--fonte-principal);
+    color: var(--marrom-escuro);
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.content {
+    display: none;
+}
+
+#todos:checked ~ #content-todos,
+#cafe:checked ~ #content-cafe,
+#bebidas:checked ~ #content-bebidas,
+#doces:checked ~ #content-doces,
+#salgados:checked ~ #content-salgados {
+  display: block;
+}
+
+.bt-labels label {
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #333;
+  font-family: var(--fonte-texto);
+
+}
+
+#todos:checked ~ .labels label[for="todos"],
+#cafes:checked ~ .labels label[for="cafes"],
+#bebidas:checked ~ .labels label[for="bebidas"],
+#doces:checked ~ .labels label[for="doces"],
+#salgados:checked ~ .labels label[for="salgados"] {
+  background-color: #3d2b1f;
+  color: white; 
+}
