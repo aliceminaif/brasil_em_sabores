@@ -207,6 +207,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     background-color: var(--branco);
+    padding-top: 20px;
 
 
 }
@@ -275,15 +276,16 @@ button:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
+    margin: 0 auto; 
 
 }
 
 .cards {
     width: 25%;
     height: 20rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 20px;
     overflow: hidden;
 
