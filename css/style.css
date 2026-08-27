@@ -201,7 +201,7 @@ button:hover {
 
 #cardapio {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;    
     flex-direction: column;
     justify-content: center;
@@ -230,6 +230,7 @@ button:hover {
 
 .content {
     display: none;
+
 }
 
 #todos:checked ~ #content-todos,
@@ -238,6 +239,16 @@ button:hover {
 #doces:checked ~ #content-doces,
 #salgados:checked ~ #content-salgados {
   display: block;
+}
+.bt-labels {
+    display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #333;
+  font-family: var(--fonte-texto);
 }
 
 .bt-labels label {
@@ -256,4 +267,81 @@ button:hover {
 #salgados:checked ~ .labels label[for="salgados"] {
   background-color: #3d2b1f;
   color: white; 
+}
+
+.card-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.cards {
+    width: 25%;
+    height: 20rem;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+
+
+
+}
+
+.cards figure {
+    width: 100%;
+    height: 190px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+
+
+}
+
+.cards figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.cards h3 {
+    font-family: var(--fonte-texto);
+    color: var(--caramelo);
+    font-size: 20px;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+
+.cards h4 {
+    font-family: var(--fonte-texto);
+    color: var(--verde);
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+.bt-cards {
+    width: 10%;
+    height: 35px;
+    border: solid 1px var(--marrom-escuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--branco);
+    margin-left: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+}
+
+.bt-cards button {
+    text-decoration: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+
+
 }
