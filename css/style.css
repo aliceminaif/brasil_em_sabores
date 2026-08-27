@@ -207,7 +207,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     background-color: var(--branco);
-    padding-top: 20px;
+    padding-top: 100px;
 
 
 }
@@ -258,6 +258,7 @@ button:hover {
   cursor: pointer;
   color: #333;
   font-family: var(--fonte-texto);
+
 
 }
 
