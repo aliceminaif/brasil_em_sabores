@@ -350,6 +350,7 @@ button:hover {
     border: none;
     font-size: 25px;
     cursor: pointer;
+    background-color: var(--branco);
 
 
 }
