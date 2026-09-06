@@ -5,17 +5,28 @@
 }
 
 :root {
-    --marrom-escuro: #4B2E2B; 
-    --caramelo:#A84A32;
-    --creme: #F5EFE6;
-    --bege: #E8DCC8;
-    --verde: #7D8F69;
-    --branco: #f5f5f5; 
-    --dourado: #D6A536;
-    --bege-acizentado: #A69B8D;
-    --verde-escuro: #37412a;
+
+    /* CORES PRINCIPAIS */
+    --verde-brasil: #009C3B;
+    --verde-escuro: #006B2D;
+    --amarelo-brasil: #FFDF00;
+    --azul-brasil: #002776;
+
+    /* CORES DE DESTAQUE */
+    --laranja: #E85D04;
+
+    /* FUNDOS */
+    --creme: #FFF3D6;
+    --verde-claro: #DDECC7;
+
+    /* TEXTOS */
+    --marrom-escuro: #3B2416;
+    --branco: #FFFFFF;
+
+    /* FONTES */
     --fonte-principal: "Playfair Display", serif;
-    --fonte-texto: "Poppins", sans-serif;
+    --fonte-texto:  "Poppins", sans-serif;
+
 }
 
 a{ 
@@ -38,7 +49,7 @@ main {
 .cabecalho {
     width: 95%;
     height: 55px;
-    background-color: var(--marrom-escuro);
+    background-color: #015323;
     border-radius: 65px;
     margin-top: 20px;
     margin-left: 30px;
@@ -61,7 +72,7 @@ main {
 .logo-header h1 {
     font-family: var(--fonte-principal);
     font-size: 24px ;
-    color: var(--caramelo);
+    color: whitesmoke;
     transition: transform 0.3s ease;
     display: inline-block;
 }
@@ -100,7 +111,7 @@ main {
 a:hover {
     transform: translateY(-4px);
     transform: scale(0.97);
-    color: var(--caramelo);
+    color: var(--laranja) ;
 
 }
 
@@ -123,7 +134,7 @@ a:hover {
 .destaque {
     width: 100%;
     height: 100vh;
-    background-color: var(--bege);
+    background-color: #FFF3D6;
     overflow: hidden;
     position: relative;
 }
@@ -134,7 +145,7 @@ a:hover {
     right: 0;
     width: 55%;
     height: 100%;
-    background-image: url(../assets/cafe-destaque.png);
+    background-image: url(../assets/fundo_destaque.png);
     background-size: cover;
     background-position: center;
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
@@ -153,7 +164,7 @@ a:hover {
 .texto-destaque h1 {
     font-family: var(--fonte-principal);
     color: var(--marrom-escuro);
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .texto-destaque p{
@@ -162,8 +173,8 @@ a:hover {
     font-size: 20px;
 }
 
-.caramelo {
-    color: var(--caramelo);
+.verde {
+    color: #009C3B;
 }
 
 .bt-menu {
@@ -172,9 +183,9 @@ a:hover {
     /* border: aqua solid 1px; */
     margin-left: 35px;
     margin-top: 35px;
-    background-color: var(--verde);
+    background-color: var(--verde-escuro);
     font-family: var(--fonte-texto);
-    color: #4B2E2B;
+    color: whitesmoke;
     cursor: pointer;
     font-weight: 800;
     border-radius: 5px;
@@ -188,9 +199,9 @@ a:hover {
     /* border: aqua solid 1px; */
     margin-left: 35px;
     margin-top: 35px;
-    background-color: var(--marrom-escuro);
+    background-color: #E85D04;
+    color: #FFFFFF;
     font-family: var(--fonte-texto);
-    color: var(--branco);
     cursor: pointer;
     font-weight: 800;
     border-radius: 5px;
@@ -216,65 +227,6 @@ button:hover {
 
 }
 
-.texto-cardapio {
-    width: 25%;
-    height: 65px;
-    /* border: 1px aqua solid; */
-    text-align: center;
-    font-family: var(--fonte-texto);
-}
-
-.texto-cardapio h1 {
-    font-family: var(--fonte-principal);
-    color: var(--marrom-escuro);
-}
-
-.tabs input[type="radio"] {
-    display: none;
-}
-
-.content {
-    display: none;
-
-}
-
-#todos:checked ~ #content-todos,
-#cafe:checked ~ #content-cafe,
-#bebidas:checked ~ #content-bebidas,
-#doces:checked ~ #content-doces,
-#salgados:checked ~ #content-salgados {
-  display: block;
-}
-.bt-labels {
-    display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: #333;
-  font-family: var(--fonte-texto);
-}
-
-.bt-labels label {
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  color: #333;
-  font-family: var(--fonte-texto);
-
-
-}
-
-#todos:checked ~ .labels label[for="todos"],
-#cafes:checked ~ .labels label[for="cafes"],
-#bebidas:checked ~ .labels label[for="bebidas"],
-#doces:checked ~ .labels label[for="doces"],
-#salgados:checked ~ .labels label[for="salgados"] {
-  background-color: #3d2b1f;
-  color: white; 
-}
-
 .card-container {
     width: 90%;
     height: auto;
@@ -287,18 +239,15 @@ button:hover {
 
 }
 
-.cards {
-    width: 29%;
-    height: 20rem;
-    /* border: 1px solid black; */
+.card-norte {
+    width: 19%;
+    height: 21rem;
+    border: 1px solid black;
     border-radius: 20px;
     overflow: hidden;
-
-
-
 }
 
-.cards figure {
+.card-norte figure {
     width: 100%;
     height: 190px;
     /* border: 1px solid black; */
@@ -307,10 +256,18 @@ button:hover {
 
 }
 
-.cards figure img {
+.texto-norte {
+    width: 100%;
+    height: 100px;
+    background-color: var(--branco);
+    text-align: center;
+}
+
+.card-norte figure img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    
+
 }
 
 .cards h3 {
