@@ -228,9 +228,9 @@ button:hover {
 }
 
 .texto-cardapio {
-    width: 100%;
+    width: 80%;
     height: 150px;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     display: flex;
     justify-content: center;
     align-items: center;
