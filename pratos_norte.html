@@ -1,15 +1,274 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brasil em Sabores - Norte</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+            /* CORES PRINCIPAIS */
+            --verde-brasil: #009C3B;
+            --verde-escuro: #006B2D;
+            --amarelo-brasil: #FFDF00;
+            --azul-brasil: #002776;
+
+            /* CORES DE DESTAQUE */
+            --laranja: #E85D04;
+
+            /* FUNDOS */
+            --creme: #FFF3D6;
+            --verde-claro: #DDECC7;
+
+            /* TEXTOS */
+            --marrom-escuro: #3B2416;
+            --branco: #FFFFFF;
+
+            /* FONTES */
+            --fonte-principal: "Playfair Display", serif;
+            --fonte-texto: "Poppins", sans-serif;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+        body{
+            background-color: var(--verde-claro);
+        }
+
+        .cardapio {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+
+        .voltar {
+            /* border: solid 1px aqua; */
+            font-size: 25px;
+            color: var(--marrom-escuro);
+            /* padding-top: 50px; */
+
+
+        }
+
+        .titulo {
+            width: 60%;
+            height: 100px;
+            /* border: solid aqua 1px; */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 50px;
+            background-color: var(--verde-brasil);
+            border-radius: 100%;
+
+
+        }
+
+        .titulo h1 {
+            font-family: var(--fonte-principal);
+            color: var(--marrom-escuro);
+
+        }
+
+        .titulo h3 {
+            font-family: var(--fonte-principal);
+            color: var(--marrom-escuro);
+        }
+
+        .bt-voltar {
+            width: 80%;
+            height: 50px;
+            /* border: 1px solid aqua ; */
+            padding-left: 40px;
+            margin-top: 50px;
+        }
+        .card-container {
+            width: 95%;
+            height: 340px;
+            /* border: solid aqua 1px; */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 100px;
+
+        }
+
+        .cards{
+            width: 20%;
+            height: 100%;
+            /* border: solid aqua 1px; */
+            border-radius: 20px;
+            background-color: whitesmoke;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cards:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.50);
+        }
+
+        .cards figure {
+            width: 100%;
+            height: 150px;
+            /* border: solid aqua 1px; */
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .cards figure img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .cards h2 {
+            font-family: var(--fonte-principal);
+            color: var(--verde-escuro);
+            margin-left: 5px;
+            padding-top: 20px;
+
+        }
+        .cards p{
+            font-family: var(--fonte-texto);
+            color: var(--marrom-escuro);
+            font-size: 15px;
+            margin-left: 5px;
+        }
+        .cards h4 {
+            font-family: var(--fonte-texto);
+            color: var(--verde-escuro);
+            margin-left: 5px;
+
+        }
+
+        .cards button {
+            margin-left: 5px;
+            background-color: var(--verde-escuro);
+            width: 95%;
+            border-radius: 10px;
+            height: 40px;
+            margin-top: 15px;
+            border: none;
+            color: whitesmoke;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+
+
+        }
+
+        .cards button:hover {
+            transform: scale(0.97);
+            color: var(--amarelo-brasil);
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <h1>ola</h1>
+    <div class="bt-voltar">
+        <a href="index.html" class="voltar">
+            < Voltar ao início </a>
 
-    
+    </div>
+    <div class="cardapio">
+        <div class="titulo">
+            <h1>NOSSO CARDÁPIO</h1>
+            <h3>PRATOS TÍPICOS DA REGIÃO NORTE</h3>
+        </div>
+        <div class="card-container">
+            <div class="cards">
+                <figure>
+                    <img src="assets/acai na tigela.jpg" alt="">
+                </figure>
+                <h2>Açaí na Tigela</h2>
+                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
+                <h4>R$ 18,00</h4>
+                <button>
+                    Adicionar carrinho →
+                </button>
+            </div>
+            <div class="cards">
+                <figure>
+                    <img src="assets/acai na tigela.jpg" alt="">
+                </figure>
+                <h2>Açaí na Tigela</h2>
+                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
+                <h4>R$ 18,00</h4>
+                <button>
+                    Adicionar carrinho →
+                </button>
+            </div>
+            <div class="cards">
+                <figure>
+                    <img src="assets/acai na tigela.jpg" alt="">
+                </figure>
+                <h2>Açaí na Tigela</h2>
+                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
+                <h4>R$ 18,00</h4>
+                <button>
+                    Adicionar carrinho →
+                </button>
+            </div>
+            <div class="cards">
+                <figure>
+                    <img src="assets/acai na tigela.jpg" alt="">
+                </figure>
+                <h2>Açaí na Tigela</h2>
+                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
+                <h4>R$ 18,00</h4>
+                <button>
+                    Adicionar carrinho →
+                </button>
+            </div>
+            <div class="cards">
+                <figure>
+                    <img src="assets/acai na tigela.jpg" alt="">
+                </figure>
+                <h2>Açaí na Tigela</h2>
+                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
+                <h4>R$ 18,00</h4>
+                <button>
+                    Adicionar carrinho →
+                </button>
+            </div>
+            <div class="cards">
+                <figure>
+                    <img src="assets/acai na tigela.jpg" alt="">
+                </figure>
+                <h2>Açaí na Tigela</h2>
+                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
+                <h4>R$ 18,00</h4>
+                <button>
+                    Adicionar carrinho →
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
