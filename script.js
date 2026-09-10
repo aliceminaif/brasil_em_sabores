@@ -1,8 +1,8 @@
-function abrirModal() {
-    document.getElementById("modalTacaca").style.display = "flex";
+function abrirModal(id) {
+    document.getElementById(id).style.display = "flex";
 
 }
 
-function fecharModal(){
-    document.getElementById("modalTacaca").style.display = "none"
+function fecharModal(id){
+    document.getElementById(id).style.display = "none"
 }
