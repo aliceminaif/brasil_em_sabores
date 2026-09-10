@@ -26,7 +26,7 @@
 
             /* FUNDOS */
             --creme: #FFF3D6;
-            --verde-claro: #DDECC7;
+            --verde-claro: #c0e8ba;
 
             /* TEXTOS */
             --marrom-escuro: #3B2416;
@@ -64,19 +64,34 @@
         }
 
 
+        .bt-voltar {
+            width: auto;
+            height: auto;
+            padding-left: 40px;
+            margin-top: 50px;
+        }
+
         .voltar {
-            width: 20%;
-            height: 100px;
-            border: solid 1px rgb(0, 0, 0);
-            font-size: 25px;
-            color: var(--marrom-escuro);
-            /* padding-top: 50px; */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 5px;
-            box-shadow: 1px 1px 10px black;
-            background-color: #F7ECD8;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            height: auto;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: var(--fonte-texto);
+            font-weight: 600;
+            color: var(--branco);
+            background-color: var(--verde-escuro);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
 
-
+        .voltar:hover {
+            background-color: var(--verde-brasil);
+            transform: translateX(-4px);
         }
 
         .titulos {
@@ -104,6 +119,7 @@
 
 
         }
+
         .titulo2 {
             width: 60%;
             height: 50px;
@@ -134,19 +150,6 @@
             margin: 15px;
         }
 
-        .bt-voltar {
-            width: 15%;
-            height: 50px;
-            /* border: 1px solid aqua ; */
-            padding-left: 40px;
-            margin-top: 50px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            
-        }
-
-        .bt-voltar:hover {
-            transform: translateY(-2px);
-        }
 
         .card-container {
             width: 95%;
@@ -194,24 +197,18 @@
         .cards h2 {
             font-family: var(--fonte-principal);
             color: var(--verde-escuro);
-            margin-left: 5px;
-            /* padding-top: 20px; */
+            padding-top: 20px;
+            text-align: center;
 
         }
 
-        .cards p {
+        .cards h3 {
             font-family: var(--fonte-texto);
-            color: var(--marrom-escuro);
-            font-size: 15px;
-            margin-left: 5px;
+            color: var(--laranja);
+            font-size: 20px;
+            text-align: center;
         }
 
-        .cards h4 {
-            font-family: var(--fonte-texto);
-            color: var(--verde-escuro);
-            margin-left: 5px;
-
-        }
 
         .cards button {
             margin-left: 5px;
@@ -219,7 +216,7 @@
             width: 95%;
             border-radius: 10px;
             height: 40px;
-            margin-top: 5px;
+            margin-top: 20px;
             border: none;
             color: whitesmoke;
             transition: transform 0.3s ease;
@@ -235,6 +232,65 @@
             transform: scale(0.97);
             color: var(--amarelo-brasil);
         }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.6);
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1000;
+        }
+
+        .modal-conteudo {
+            background-color: var(--verde-claro);
+
+            width: 600px;
+            max-width: 80%;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            position: relative;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-conteudo h2 {
+            color: #4B2E2B;
+            font-family: var(--fonte-principal)
+        }
+
+        .modal-conteudo p {
+            color: #3b2925;
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+        }
+
+        .fechar {
+            position: absolute;
+
+            top: 15px;
+            right: 20px;
+
+            border: none;
+            background: none;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            color: #4B2E2B;
+        }
     </style>
 </head>
 
@@ -248,7 +304,7 @@
     <div class="cardapio">
         <div class="titulos">
 
-        
+
             <div class="titulo">
                 <span></span>
                 <h1>NOSSO CARDÁPIO</h1>
@@ -262,78 +318,166 @@
         <div class="card-container">
             <div class="cards">
                 <figure>
-                    <img src="assets/acai na tigela.jpg" alt="">
+                    <img src="assets/tacaca.jfif" alt="">
                 </figure>
-                <h2>Açaí na Tigela</h2>
-                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
-                <h4>R$ 18,00</h4>
-                <button>
-                    Adicionar carrinho →
+                <h2>Tacacá</h2>
+                <h3>Pará e Amazonas</h3>
+                <button onclick="abrirModal()">
+                    Conheça mais →
                 </button>
+
+            </div>
+
+            <div class="modal" id="modalTacaca">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal()">x</button>
+                    <h2>Tacacá</h2>
+                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
+                        ligadas
+                        aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
+                        alimentação
+                        amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido pelas
+                        tacacazeiras.
+                        Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como Patrimônio Cultural
+                        do
+                        Brasil.</p>
+                </div>
             </div>
             <div class="cards">
                 <figure>
-                    <img src="assets/acai na tigela.jpg" alt="">
+                    <img src="assets/Pato no Tucupi.jfif" alt="">
                 </figure>
-                <h2>Açaí na Tigela</h2>
-                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
-                <h4>R$ 18,00</h4>
-                <button>
-                    Adicionar carrinho →
+                <h2>Pato no Tucupi</h2>
+                <h3>Pará</h3>
+                <button onclick="abrirModal()">
+                    Conheça mais →
                 </button>
+
+            </div>
+            <div class="modal" id="modalTacaca">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal()">x</button>
+                    <h2>Pato no Tucupi</h2>
+                    <p>O prato combina pato assado, tucupi e jambu. O tucupi é produzido a partir da mandioca-brava, seguindo técnicas tradicionais de processamento. A receita representa a mistura entre conhecimentos indígenas e ingredientes incorporados posteriormente à culinária amazônica.</p>
+                </div>
             </div>
             <div class="cards">
                 <figure>
-                    <img src="assets/acai na tigela.jpg" alt="">
+                    <img src="assets/tacaca.jfif" alt="">
                 </figure>
-                <h2>Açaí na Tigela</h2>
-                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
-                <h4>R$ 18,00</h4>
-                <button>
-                    Adicionar carrinho →
+                <h2>Tacacá</h2>
+                <h3>Pará e Amazonas</h3>
+                <button onclick="abrirModal()">
+                    Conheça mais →
                 </button>
+
+            </div>
+
+            <div class="modal" id="modalTacaca">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal()">x</button>
+                    <h2>Tacacá</h2>
+                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
+                        ligadas
+                        aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
+                        alimentação
+                        amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido pelas
+                        tacacazeiras.
+                        Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como Patrimônio Cultural
+                        do
+                        Brasil.</p>
+                </div>
             </div>
             <div class="cards">
                 <figure>
-                    <img src="assets/acai na tigela.jpg" alt="">
+                    <img src="assets/tacaca.jfif" alt="">
                 </figure>
-                <h2>Açaí na Tigela</h2>
-                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
-                <h4>R$ 18,00</h4>
-                <button>
-                    Adicionar carrinho →
+                <h2>Tacacá</h2>
+                <h3>Pará e Amazonas</h3>
+                <button onclick="abrirModal()">
+                    Conheça mais →
                 </button>
+
+            </div>
+
+            <div class="modal" id="modalTacaca">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal()">x</button>
+                    <h2>Tacacá</h2>
+                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
+                        ligadas
+                        aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
+                        alimentação
+                        amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido pelas
+                        tacacazeiras.
+                        Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como Patrimônio Cultural
+                        do
+                        Brasil.</p>
+                </div>
             </div>
             <div class="cards">
                 <figure>
-                    <img src="assets/acai na tigela.jpg" alt="">
+                    <img src="assets/tacaca.jfif" alt="">
                 </figure>
-                <h2>Açaí na Tigela</h2>
-                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
-                <h4>R$ 18,00</h4>
-                <button>
-                    Adicionar carrinho →
+                <h2>Tacacá</h2>
+                <h3>Pará e Amazonas</h3>
+                <button onclick="abrirModal()">
+                    Conheça mais →
                 </button>
+
+            </div>
+
+            <div class="modal" id="modalTacaca">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal()">x</button>
+                    <h2>Tacacá</h2>
+                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
+                        ligadas
+                        aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
+                        alimentação
+                        amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido pelas
+                        tacacazeiras.
+                        Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como Patrimônio Cultural
+                        do
+                        Brasil.</p>
+                </div>
             </div>
             <div class="cards">
                 <figure>
-                    <img src="assets/acai na tigela.jpg" alt="">
+                    <img src="assets/tacaca.jfif" alt="">
                 </figure>
-                <h2>Açaí na Tigela</h2>
-                <p>Açaí batido e servido com banana, granola e mel. Energia e sabor da Amazônia em um só prato.</p>
-                <h4>R$ 18,00</h4>
-                <button>
-                    Adicionar carrinho →
+                <h2>Tacacá</h2>
+                <h3>Pará e Amazonas</h3>
+                <button onclick="abrirModal()">
+                    Conheça mais →
                 </button>
+
+            </div>
+
+            <div class="modal" id="modalTacaca">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal()">x</button>
+                    <h2>Tacacá</h2>
+                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
+                        ligadas
+                        aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
+                        alimentação
+                        amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido pelas
+                        tacacazeiras.
+                        Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como Patrimônio Cultural
+                        do
+                        Brasil.</p>
+                </div>
             </div>
         </div>
 
     </div>
 
     <footer>
-        
+
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

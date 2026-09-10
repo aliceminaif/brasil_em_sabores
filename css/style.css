@@ -112,20 +112,7 @@ a:hover {
 }
 
 
-.menu-direito {
-    width: 30%;
-    height: 55px;
-    /* border: solid 1px black; */
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-    /* margin-left: 150px; */
-}
 
-.menu-direito h2 {
-    cursor: pointer;
-}
 
 .destaque {
     width: 100%;
@@ -390,6 +377,8 @@ button:hover {
 .bt-norte:hover {
     transform: scale(0.97);
 }
+
+
 
 /* NORDESTE */
 .card-nordeste {
@@ -738,18 +727,18 @@ button:hover {
 
 
 
-#sobre {
-    width: 100%;
-    height: 100vh;
-    background-color: red;
-}
 
-#contato {
+#famosas {
     width: 100%;
     height: 100vh;
     background-color: rebeccapurple;
 }
 
+#sobre {
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
 
 
 
