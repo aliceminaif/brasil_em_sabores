@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil em Sabores - Nordeste</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+            /* CORES PRINCIPAIS */
+            --verde-brasil: #009C3B;
+            --verde-escuro: #006B2D;
+            --amarelo-brasil: #FFDF00;
+            --azul-brasil: #002776;
+
+            /* CORES DE DESTAQUE */
+            --laranja: #E85D04;
+
+            /* FUNDOS */
+            --creme: #FFF3D6;
+            --verde-claro: #c0e8ba;
+
+            /* TEXTOS */
+            --marrom-escuro: #533420;
+            --branco: #FFFFFF;
+
+            /* FONTES */
+            --fonte-principal: "Playfair Display", serif;
+            --fonte-texto: "Poppins", sans-serif;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #F8D088;
+        }
+
+        .cardapio {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(assets/fundo_nordeste.png);
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .bt-voltar {
+            width: auto;
+            height: auto;
+            padding-left: 40px;
+            margin-top: 50px;
+        }
+
+        .voltar {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            height: auto;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: var(--fonte-texto);
+            font-weight: 600;
+            color: var(--branco);
+            background-color: #C04000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .voltar:hover {
+            background-color: var(--laranja);
+            transform: translateX(-4px);
+        }
+
+        .titulos {
+            width: 80%;
+            height: 150px;
+            /* border: aqua solid 1px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .titulo {
+            width: 60%;
+            height: 100px;
+            /* border: solid aqua 1px; */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            /* margin-bottom: 30px; */
+
+
+
+
+        }
+
+        .titulo2 {
+            width: 60%;
+            height: 50px;
+            /* border: solid aqua 1px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+
+        .titulo h1 {
+            font-family: var(--fonte-principal);
+            color: #713010;
+
+        }
+
+        .titulo2 h3 {
+            font-family: var(--fonte-principal);
+            color: #C04000;
+        }
+
+        .titulo span {
+            width: 100px;
+            height: 2px;
+            background-color: var(--laranja);
+            /* padding: 5px; */
+            margin: 15px;
+        }
+
+
+        .card-container {
+            width: 95%;
+            min-height: 340px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .cards {
+            width: 25%;
+            height: 340px;
+            /* border: solid aqua 1px; */
+            border-radius: 15px;
+            background-color: #F0E0B0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cards:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.50);
+        }
+
+        .cards figure {
+            width: 100%;
+            height: 200px;
+            /* border: solid aqua 1px; */
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .cards figure img {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .cards h2 {
+            font-family: var(--fonte-principal);
+            color: #713010;
+            padding-top: 20px;
+            text-align: center;
+
+        }
+
+        .cards h3 {
+            font-family: var(--fonte-texto);
+            color: #F07000;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+        .cards button {
+            margin-left: 5px;
+            background-color: #F07000;
+            width: 95%;
+            border-radius: 10px;
+            height: 40px;
+            margin-top: 20px;
+            border: none;
+            color: whitesmoke;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            font-family: var(--fonte-texto);
+            font-size: 17px;
+
+
+
+        }
+
+        .cards button:hover {
+            transform: scale(0.97);
+
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.6);
+
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1000;
+        }
+
+        .modal-conteudo {
+            background-color: rgb(240, 194, 108);
+
+            width: 600px;
+            max-width: 80%;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            position: relative;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-conteudo h2 {
+            color: var(--marrom-escuro);
+            font-family: var(--fonte-principal)
+        }
+
+        .modal-conteudo p {
+            color: #713010;
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+        }
+
+        .fechar {
+            position: absolute;
+
+            top: 15px;
+            right: 20px;
+
+            border: none;
+            background: none;
+
+            font-size: 30px;
+
+            cursor: pointer;
+
+            color: #4B2E2B;
+        }
+
+        .sobre {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .titulo-sobre {
+            width: 40%;
+            height: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 50px;
+        }
+
+        .titulo-sobre h3 {
+            font-family: var(--fonte-texto);
+            color: #713010;
+            font-size: 30px;
+            text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .titulo-sobre span {
+            width: 100px;
+            height: 2px;
+            background-color: #C04000;
+            margin: 15px;
+        }
+
+        .titulo-sobre2 {
+            width: 40%;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .titulo-sobre2 h1 {
+            font-family: var(--fonte-principal);
+            color: #C04000;
+            font-size: 80px;
+            text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .titulo-sobre2 h4 {
+            font-family: var(--fonte-texto);
+            color: #713010;
+            font-size: 20px;
+            text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .sobre-linha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            width: 90%;
+            margin-top: 10px;
+        }
+
+        .sobre-conteudo-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 37%;
+        }
+
+        .conteudo-sobre {
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .conteudo-sobre p {
+            font-size: 23px;
+            font-family: var(--fonte-principal);
+            color: var(--marrom-escuro);
+            text-align: justify;
+        }
+
+        .box-sobre {
+            width: 110%;
+            height: 25%;
+            margin-top: 10px;
+            background-color: rgb(236, 185, 89);
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: nowrap;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .box-sobre-ft {
+            width: 79%;
+            height: 100%;
+        }
+
+        .box-sobre-ft figure {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box-sobre-ft figure img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box-sobre-texto h2 {
+            font-family: var(--fonte-principal);
+            color: #713010;
+            /* padding-top: 10px; */
+            padding-left: 10px;
+        }
+
+        .box-sobre-texto p {
+            font-family: var(--fonte-texto);
+            color: var(--marrom-escuro);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .img-sobre {
+            width: 40%;
+            margin-left: 20px;
+        }
+
+        .img-sobre figure {
+            width: 100%;
+        }
+
+        .img-sobre figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cardapio">
+        <div class="bt-voltar">
+            <a href="index.html" class="voltar">
+                < Voltar ao início </a>
+
+        </div>
+        <div class="titulos">
+
+
+            <div class="titulo">
+                <span></span>
+                <h1>CONHEÇA MAIS SOBRE:</h1>
+                <span></span>
+            </div>
+            <div class="titulo2">
+
+                <h3>OS PRATOS TÍPICOS DA REGIÃO DO <span class="verde"></span> NORDESTE</h3>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="cards">
+                <figure><img src="assets/acaraje.jpg" alt=""></figure>
+                <h2>Acarajé</h2>
+                <h3>Bahia</h3>
+                <button onclick="abrirModal('modalTacaca1')">Conheça mais →</button>
+            </div>
+            <div class="modal" id="modalTacaca1">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
+                    <h2>Acarajé</h2>
+                    <p>O acarajé é um bolinho feito de feijão-fradinho e frito no azeite de dendê. Sua história está ligada à África Ocidental e à população africana escravizada que trouxe seus conhecimentos culinários para o Brasil. Além de alimento, possui importância religiosa no candomblé. O Ofício das Baianas de Acarajé foi reconhecido pelo Iphan como Patrimônio Cultural do Brasil em 2005.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <figure><img src="assets/Baião de Dois.jpg" alt=""></figure>
+                <h2>Baião de Dois</h2>
+                <h3>Ceará</h3>
+                <button onclick="abrirModal('modalPato')">Conheça mais →</button>
+            </div>
+            <div class="modal" id="modalPato">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal('modalPato')">x</button>
+                    <h2>Baião de Dois</h2>
+                    <p>O baião de dois combina principalmente arroz e feijão, podendo levar carne-seca, queijo coalho e manteiga de garrafa. Tornou-se símbolo da cozinha sertaneja e representa uma alimentação baseada em ingredientes acessíveis e resistentes às condições do interior nordestino.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <figure><img src="assets/Carne de Sol com Macaxeira.webp" alt=""></figure>
+                <h2>Carne de Sol com Macaxeira</h2>
+                <h3>Nordeste</h3>
+                <button onclick="abrirModal('modalTacaca2')">Conheça mais →</button>
+            </div>
+            <div class="modal" id="modalTacaca2">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
+                    <h2>Carne de Sol com Macaxeira</h2>
+                    <p>A carne de sol surgiu como uma forma tradicional de conservar a carne por meio do sal e da secagem. A técnica era especialmente importante em regiões onde a conservação da carne fresca era difícil. Servida com macaxeira, tornou-se um dos pratos mais conhecidos da culinária sertaneja.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <figure><img src="assets/Vatapá.jpg" alt=""></figure>
+                <h2>Vatapá</h2>
+                <h3>Bahia</h3>
+                <button onclick="abrirModal('modalTacaca3')">Conheça mais →</button>
+            </div>
+            <div class="modal" id="modalTacaca3">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
+                    <h2>Vatapá</h2>
+                    <p>O vatapá é um creme preparado tradicionalmente com ingredientes como pão ou farinha, camarão, leite de coco, amendoim, castanha e azeite de dendê. Sua história está relacionada principalmente às influências africanas na culinária baiana, combinadas a ingredientes disponíveis no Brasil.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <figure><img src="assets/Cuscuz Nordestino.jpg" alt=""></figure>
+                <h2>Cuscuz Nordestino</h2>
+                <h3>Nordeste</h3>
+                <button onclick="abrirModal('modalTacaca4')">Conheça mais →</button>
+            </div>
+            <div class="modal" id="modalTacaca4">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
+                    <h2>Cuscuz Nordestino</h2>
+                    <p>Feito principalmente com milho, o cuscuz tornou-se um alimento fundamental em muitas partes do Nordeste. Sua preparação e consumo fazem parte da alimentação cotidiana e das tradições familiares. É um exemplo de como o milho ganhou diferentes formas de preparo dentro da culinária brasileira.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <figure><img src="assets/Moqueca Baiana.jpg" alt=""></figure>
+                <h2>Moqueca Baiana</h2>
+                <h3>Bahia</h3>
+                <button onclick="abrirModal('modalTacaca5')">Conheça mais →</button>
+            </div>
+            <div class="modal" id="modalTacaca5">
+                <div class="modal-conteudo">
+                    <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
+                    <h2>Moqueca Baiana</h2>
+                    <p>A moqueca baiana combina peixes ou frutos do mar, leite de coco, azeite de dendê e temperos. Sua formação resulta do encontro de diferentes tradições culinárias, principalmente indígenas, africanas e portuguesas. É uma das preparações mais representativas da cozinha do litoral baiano.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sobre">
+        <div class="titulo-sobre">
+            <span></span>
+            <h3>REGIÃO</h3>
+            <span></span>
+        </div>
+        <div class="titulo-sobre2">
+            <h1>NORDESTE</h1>
+            <h4>Cultura, natureza e um povo de força</h4>
+        </div>
+
+        <div class="sobre-linha">
+            <div class="sobre-conteudo-wrapper">
+                <div class="conteudo-sobre">
+                    <p>
+                        O Nordeste é a região mais seca e ensolarada do Brasil, conhecida por sua rica cultura, belezas naturais e um povo acolhedor e cheio de tradições. Abrange nove estados: Maranhão, Piauí, Ceará, Rio Grande do Norte, Paraíba, Pernambuco, Alagoas, Sergipe e Bahia. É uma terra de contrastes, onde o sertão e o litoral se encontram, e onde se preservam fortes manifestações culturais, como o forró, o artesanato, a culinária típica e o cordel.
+
+                    </p>
+                </div>
+
+                <div class="box-sobre">
+                    <div class="box-sobre-ft">
+                        <figure>
+                            <img src="assets/img-box-sobre-nordeste.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="box-sobre-texto">
+                        <h2>Sabia que?</h2>
+                        <p>O Nordeste tem um dos maiores patrimônios culturais do Brasil, com festas como o São João, seus artesanatos únicos e paisagens incríveis, como as dunas de Natal, os Lençóis Maranhenses e o Cânion do Xingó.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-sobre">
+                <figure>
+                    <img src="assets/img-sobre-nordeste.png" alt="">
+                </figure>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
