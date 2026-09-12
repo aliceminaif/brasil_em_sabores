@@ -43,26 +43,21 @@
         }
 
         body {
-            /* background-color: var(--verde-claro); */
-            background-image: url(assets/fundo_norte.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
             background-color: #F7ECD8;
         }
 
         .cardapio {
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-
-
-
+            background-image: url(assets/fundo_norte.png);
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
-
 
         .bt-voltar {
             width: auto;
@@ -153,15 +148,14 @@
 
         .card-container {
             width: 95%;
-            height: 340px;
-            /* border: solid aqua 1px; */
+            min-height: 340px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             gap: 40px;
-
+            margin-bottom: 10px;
         }
 
         .cards {
@@ -291,17 +285,128 @@
 
             color: #4B2E2B;
         }
+
+        .sobre {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .titulo-sobre {
+            width: 40%;
+            height: 5%;
+            /* border: 1px solid aqua ; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 50px;
+
+        }
+
+        .titulo-sobre h3 {
+            font-family: var(--fonte-texto);
+            color: var(--verde-escuro);
+            font-size: 30px;
+        }
+
+        .titulo-sobre span {
+            width: 100px;
+            height: 2px;
+            background-color: #f2b705;
+            /* padding: 5px; */
+            margin: 15px;
+        }
+
+        .titulo-sobre2 {
+            width: 40%;
+            height: 15%;
+            /* border: solid aqua 1px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .titulo-sobre2 h1 {
+            font-family: var(--fonte-principal);
+            color: var(--verde-escuro);
+            font-size: 80px;
+        }
+
+        .titulo-sobre2 h4 {
+            font-family: var(--fonte-texto);
+            color: var(--marrom-escuro);
+            font-size: 20px;
+        }
+
+        .conteudo-sobre {
+            width: 37%;
+            height: 30%;
+            border: solid aqua 1px;
+            margin-top: 50px;
+            margin-left: 60px;
+        }
+
+        .conteudo-sobre p {
+            font-size: 23px;
+            font-family: var(--fonte-principal);
+            color: var(--marrom-escuro);
+
+        }
+        .box-sobre {
+            width: 37%;
+            height: 20%;
+            /* border: solid aqua 1px; */
+            margin-left: 60px;
+            margin-top: 20px;
+            background-color: var(--verde-claro);
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .box-sobre-ft {
+            width: 70%;
+            height: 95%;
+            /* border: solid aqua   1px; */
+        }
+
+        .box-sobre-ft figure {
+            width: 100%;
+            height: 100%;
+
+        }
+        .box-sobre-ft figure img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box-sobre-texto h2 {
+            font-family: var(--fonte-principal);
+            color: var(--verde-escuro);
+            padding-top: 10px;
+            padding-left: 10px;
+            
+        }
+
+        .box-sobre-texto p {
+            font-family: var(--fonte-texto);
+            color: var(--marrom-escuro);
+            font-size: 15px;
+            padding-left: 10px;
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="bt-voltar">
-        <a href="index.html" class="voltar">
-            < Voltar ao início </a>
-
-    </div>
     <div class="cardapio">
+        <div class="bt-voltar">
+            <a href="index.html" class="voltar">
+                < Voltar ao início </a>
+
+        </div>
         <div class="titulos">
 
 
@@ -326,7 +431,11 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
                     <h2>Tacacá</h2>
-                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão ligadas aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da alimentação amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido pelas tacacazeiras. Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como Patrimônio Cultural do Brasil.</p>
+                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
+                        ligadas aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
+                        alimentação amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido
+                        pelas tacacazeiras. Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como
+                        Patrimônio Cultural do Brasil.</p>
                 </div>
             </div>
 
@@ -340,7 +449,9 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
                     <h2>Pato no Tucupi</h2>
-                    <p>O prato combina pato assado, tucupi e jambu. O tucupi é produzido a partir da mandioca-brava, seguindo técnicas tradicionais de processamento. A receita representa a mistura entre conhecimentos indígenas e ingredientes incorporados posteriormente à culinária amazônica.</p>
+                    <p>O prato combina pato assado, tucupi e jambu. O tucupi é produzido a partir da mandioca-brava,
+                        seguindo técnicas tradicionais de processamento. A receita representa a mistura entre
+                        conhecimentos indígenas e ingredientes incorporados posteriormente à culinária amazônica.</p>
                 </div>
             </div>
 
@@ -354,7 +465,9 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
                     <h2>Maniçoba</h2>
-                    <p>A maniçoba utiliza folhas de mandioca, que precisam passar por um longo processo de cozimento para eliminar sua toxicidade. Depois, são acrescentadas carnes e outros ingredientes. É frequentemente associada à culinária paraense e tem forte presença em festas e celebrações.</p>
+                    <p>A maniçoba utiliza folhas de mandioca, que precisam passar por um longo processo de cozimento
+                        para eliminar sua toxicidade. Depois, são acrescentadas carnes e outros ingredientes. É
+                        frequentemente associada à culinária paraense e tem forte presença em festas e celebrações.</p>
                 </div>
             </div>
 
@@ -368,7 +481,10 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
                     <h2>Tambaqui Assado</h2>
-                    <p>O tambaqui é um dos peixes mais importantes da alimentação amazônica. É tradicionalmente preparado assado na brasa, valorizando o sabor do próprio peixe. Seu consumo está relacionado à enorme importância dos rios para a alimentação e para o modo de vida das populações amazônicas.</p>
+                    <p>O tambaqui é um dos peixes mais importantes da alimentação amazônica. É tradicionalmente
+                        preparado assado na brasa, valorizando o sabor do próprio peixe. Seu consumo está relacionado à
+                        enorme importância dos rios para a alimentação e para o modo de vida das populações amazônicas.
+                    </p>
                 </div>
             </div>
 
@@ -382,7 +498,10 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
                     <h2>Pirarucu de Casaca</h2>
-                    <p>O prato utiliza o pirarucu, um dos maiores peixes de água doce da Amazônia. O peixe é preparado em camadas com ingredientes como farinha, banana e outros acompanhamentos. A receita mostra como os peixes dos rios amazônicos foram incorporados a preparações mais elaboradas ao longo do tempo.</p>
+                    <p>O prato utiliza o pirarucu, um dos maiores peixes de água doce da Amazônia. O peixe é preparado
+                        em camadas com ingredientes como farinha, banana e outros acompanhamentos. A receita mostra como
+                        os peixes dos rios amazônicos foram incorporados a preparações mais elaboradas ao longo do
+                        tempo.</p>
                 </div>
             </div>
 
@@ -396,16 +515,62 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
                     <h2>Açaí com farinha de mandioca</h2>
-                    <p>Muito diferente do açaí popularizado como sobremesa no restante do país, na Amazônia ele tradicionalmente pode ser consumido como alimento junto com farinha e acompanhado de peixe ou outros alimentos. O fruto faz parte da alimentação amazônica há muito tempo e está profundamente ligado aos costumes das comunidades da região.</p>
+                    <p>Muito diferente do açaí popularizado como sobremesa no restante do país, na Amazônia ele
+                        tradicionalmente pode ser consumido como alimento junto com farinha e acompanhado de peixe ou
+                        outros alimentos. O fruto faz parte da alimentação amazônica há muito tempo e está profundamente
+                        ligado aos costumes das comunidades da região.</p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer>
+    <div class="sobre">
+        <div class="titulo-sobre">
+            <span></span>
+            <h3>REGIÃO</h3>
+            <span></span>
 
-        </footer>
+        </div>
+        <div class="titulo-sobre2">
+            <h1>NORTE</h1>
+            <h4>A força da Amazônia na culinária brasileira</h4>
 
-        <script src="script.js"></script>
+        </div>
+        <div class="conteudo-sobre">
+            <p>
+                A culinária do Norte é um verdadeiro tesouro da Amazônia, marcada pela riqueza natural da região e
+                pela
+                forte influência dos povos indígenas, ribeirinhos e comunidades tradicionais.
+
+                Aqui, ingredientes como o <strong>tucupi</strong>, o  <strong>jambu</strong>, o <strong>açaí</strong>, os peixes de água doce e a mandioca ganham
+                destaque e
+                contam histórias de <strong>resistência, cultura e conexão com a floresta.</strong>
+            </p>
+        </div>
+        <div class="box-sobre">
+
+            <div class="box-sobre-ft">
+                <figure>
+                    <img src="assets/icone-boxsobre.png" alt="">
+                </figure>
+
+            </div>
+
+            <div class="box-sobre-texto">
+                <h2>Muito mais que comida</h2>
+                <p>A culinária nortista é uma expressão da identidade amazônica. Ela carrega saberes ancestrais, tradições
+                    familiares e o modo de vida de um povo que vive em harmonia com a natureza.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
