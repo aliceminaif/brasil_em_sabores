@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasil em Sabores - Norte</title>
+    <title>Brasil em Sabores - Nordeste</title>
 
     <style>
         * {
@@ -29,7 +29,7 @@
             --verde-claro: #c0e8ba;
 
             /* TEXTOS */
-            --marrom-escuro: #3B2416;
+            --marrom-escuro: #533420;
             --branco: #FFFFFF;
 
             /* FONTES */
@@ -43,7 +43,7 @@
         }
 
         body {
-            background-color: #F7ECD8;
+            background-color: #F8D088;
         }
 
         .cardapio {
@@ -53,7 +53,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-image: url(assets/fundo_norte.png);
+            background-image: url(assets/fundo_nordeste.png);
             background-position: top center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -79,13 +79,13 @@
             font-family: var(--fonte-texto);
             font-weight: 600;
             color: var(--branco);
-            background-color: var(--verde-escuro);
+            background-color: #C04000;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .voltar:hover {
-            background-color: var(--verde-brasil);
+            background-color: var(--laranja);
             transform: translateX(-4px);
         }
 
@@ -128,19 +128,19 @@
 
         .titulo h1 {
             font-family: var(--fonte-principal);
-            color: var(--marrom-escuro);
+            color: #713010;
 
         }
 
         .titulo2 h3 {
             font-family: var(--fonte-principal);
-            color: var(--marrom-escuro);
+            color: #C04000;
         }
 
         .titulo span {
             width: 100px;
             height: 2px;
-            background-color: #f2b705;
+            background-color: var(--laranja);
             /* padding: 5px; */
             margin: 15px;
         }
@@ -156,6 +156,7 @@
             justify-content: center;
             gap: 40px;
             margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         .cards {
@@ -163,7 +164,7 @@
             height: 340px;
             /* border: solid aqua 1px; */
             border-radius: 15px;
-            background-color: whitesmoke;
+            background-color: #F0E0B0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -190,7 +191,7 @@
 
         .cards h2 {
             font-family: var(--fonte-principal);
-            color: var(--verde-escuro);
+            color: #713010;
             padding-top: 20px;
             text-align: center;
 
@@ -198,7 +199,7 @@
 
         .cards h3 {
             font-family: var(--fonte-texto);
-            color: var(--laranja);
+            color: #F07000;
             font-size: 20px;
             text-align: center;
         }
@@ -206,7 +207,7 @@
 
         .cards button {
             margin-left: 5px;
-            background-color: rgb(90, 128, 90);
+            background-color: #F07000;
             width: 95%;
             border-radius: 10px;
             height: 40px;
@@ -224,7 +225,7 @@
 
         .cards button:hover {
             transform: scale(0.97);
-            color: var(--amarelo-brasil);
+
         }
 
         .modal {
@@ -245,7 +246,7 @@
         }
 
         .modal-conteudo {
-            background-color: var(--verde-claro);
+            background-color: rgb(240, 194, 108);
 
             width: 600px;
             max-width: 80%;
@@ -260,12 +261,12 @@
         }
 
         .modal-conteudo h2 {
-            color: #4B2E2B;
+            color: var(--marrom-escuro);
             font-family: var(--fonte-principal)
         }
 
         .modal-conteudo p {
-            color: #3b2925;
+            color: #713010;
             line-height: 1.6;
             font-family: var(--fonte-texto);
         }
@@ -307,7 +308,7 @@
 
         .titulo-sobre h3 {
             font-family: var(--fonte-texto);
-            color: var(--verde-escuro);
+            color: #713010;
             font-size: 30px;
             text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.3);
         }
@@ -315,7 +316,7 @@
         .titulo-sobre span {
             width: 100px;
             height: 2px;
-            background-color: #f2b705;
+            background-color: #C04000;
             margin: 15px;
         }
 
@@ -330,14 +331,14 @@
 
         .titulo-sobre2 h1 {
             font-family: var(--fonte-principal);
-            color: var(--verde-escuro);
+            color: #C04000;
             font-size: 80px;
             text-shadow: 5px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .titulo-sobre2 h4 {
             font-family: var(--fonte-texto);
-            color: var(--marrom-escuro);
+            color: #713010;
             font-size: 20px;
             text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.3);
         }
@@ -370,10 +371,10 @@
         }
 
         .box-sobre {
-            width: 100%;
+            width: 110%;
             height: 25%;
             margin-top: 10px;
-            background-color: var(--verde-claro);
+            background-color: rgb(236, 185, 89);
             border-radius: 15px;
             display: flex;
             flex-wrap: nowrap;
@@ -381,8 +382,8 @@
         }
 
         .box-sobre-ft {
-            width: 70%;
-            height: 95%;
+            width: 79%;
+            height: 100%;
         }
 
         .box-sobre-ft figure {
@@ -397,7 +398,7 @@
 
         .box-sobre-texto h2 {
             font-family: var(--fonte-principal);
-            color: var(--verde-escuro);
+            color: #713010;
             /* padding-top: 10px; */
             padding-left: 10px;
         }
@@ -405,12 +406,13 @@
         .box-sobre-texto p {
             font-family: var(--fonte-texto);
             color: var(--marrom-escuro);
-            font-size: 15px;
+            font-size: 14px;
             padding-left: 10px;
         }
 
         .img-sobre {
             width: 40%;
+            margin-left: 20px;
         }
 
         .img-sobre figure {
@@ -438,113 +440,97 @@
 
             <div class="titulo">
                 <span></span>
-                <h1>CONHEÇA MAIS:</h1>
+                <h1>CONHEÇA MAIS SOBRE:</h1>
                 <span></span>
             </div>
             <div class="titulo2">
 
-                <h3>OS PRATOS TÍPICOS DA REGIÃO <span class="verde"></span> NORTE</h3>
+                <h3>OS PRATOS TÍPICOS DA REGIÃO DO <span class="verde"></span> NORDESTE</h3>
             </div>
         </div>
         <div class="card-container">
             <div class="cards">
-                <figure><img src="assets/tacaca.jfif" alt=""></figure>
-                <h2>Tacacá</h2>
-                <h3>Pará e Amazonas</h3>
+                <figure><img src="assets/acaraje.jpg" alt=""></figure>
+                <h2>Acarajé</h2>
+                <h3>Bahia</h3>
                 <button onclick="abrirModal('modalTacaca1')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalTacaca1">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
-                    <h2>Tacacá</h2>
-                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
-                        ligadas aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
-                        alimentação amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido
-                        pelas tacacazeiras. Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como
-                        Patrimônio Cultural do Brasil.</p>
+                    <h2>Acarajé</h2>
+                    <p>O acarajé é um bolinho feito de feijão-fradinho e frito no azeite de dendê. Sua história está ligada à África Ocidental e à população africana escravizada que trouxe seus conhecimentos culinários para o Brasil. Além de alimento, possui importância religiosa no candomblé. O Ofício das Baianas de Acarajé foi reconhecido pelo Iphan como Patrimônio Cultural do Brasil em 2005.</p>
                 </div>
             </div>
 
             <div class="cards">
-                <figure><img src="assets/Pato no Tucupi.jpg" alt=""></figure>
-                <h2>Pato no Tucupi</h2>
-                <h3>Pará</h3>
+                <figure><img src="assets/Baião de Dois.jpg" alt=""></figure>
+                <h2>Baião de Dois</h2>
+                <h3>Ceará</h3>
                 <button onclick="abrirModal('modalPato')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalPato">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
-                    <h2>Pato no Tucupi</h2>
-                    <p>O prato combina pato assado, tucupi e jambu. O tucupi é produzido a partir da mandioca-brava,
-                        seguindo técnicas tradicionais de processamento. A receita representa a mistura entre
-                        conhecimentos indígenas e ingredientes incorporados posteriormente à culinária amazônica.</p>
+                    <h2>Baião de Dois</h2>
+                    <p>O baião de dois combina principalmente arroz e feijão, podendo levar carne-seca, queijo coalho e manteiga de garrafa. Tornou-se símbolo da cozinha sertaneja e representa uma alimentação baseada em ingredientes acessíveis e resistentes às condições do interior nordestino.</p>
                 </div>
             </div>
 
             <div class="cards">
-                <figure><img src="assets/Maniçoba.webp" alt=""></figure>
-                <h2>Maniçoba</h2>
-                <h3>Pará</h3>
+                <figure><img src="assets/Carne de Sol com Macaxeira.webp" alt=""></figure>
+                <h2>Carne de Sol com Macaxeira</h2>
+                <h3>Nordeste</h3>
                 <button onclick="abrirModal('modalTacaca2')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalTacaca2">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
-                    <h2>Maniçoba</h2>
-                    <p>A maniçoba utiliza folhas de mandioca, que precisam passar por um longo processo de cozimento
-                        para eliminar sua toxicidade. Depois, são acrescentadas carnes e outros ingredientes. É
-                        frequentemente associada à culinária paraense e tem forte presença em festas e celebrações.</p>
+                    <h2>Carne de Sol com Macaxeira</h2>
+                    <p>A carne de sol surgiu como uma forma tradicional de conservar a carne por meio do sal e da secagem. A técnica era especialmente importante em regiões onde a conservação da carne fresca era difícil. Servida com macaxeira, tornou-se um dos pratos mais conhecidos da culinária sertaneja.</p>
                 </div>
             </div>
 
             <div class="cards">
-                <figure><img src="assets/Tambaqui Assado.webp" alt=""></figure>
-                <h2>Tambaqui Assado</h2>
-                <h3>Amazonas</h3>
+                <figure><img src="assets/Vatapá.jpg" alt=""></figure>
+                <h2>Vatapá</h2>
+                <h3>Bahia</h3>
                 <button onclick="abrirModal('modalTacaca3')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalTacaca3">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
-                    <h2>Tambaqui Assado</h2>
-                    <p>O tambaqui é um dos peixes mais importantes da alimentação amazônica. É tradicionalmente
-                        preparado assado na brasa, valorizando o sabor do próprio peixe. Seu consumo está relacionado à
-                        enorme importância dos rios para a alimentação e para o modo de vida das populações amazônicas.
+                    <h2>Vatapá</h2>
+                    <p>O vatapá é um creme preparado tradicionalmente com ingredientes como pão ou farinha, camarão, leite de coco, amendoim, castanha e azeite de dendê. Sua história está relacionada principalmente às influências africanas na culinária baiana, combinadas a ingredientes disponíveis no Brasil.
                     </p>
                 </div>
             </div>
 
             <div class="cards">
-                <figure><img src="assets/Pirarucu de Casaca.jpg" alt=""></figure>
-                <h2>Pirarucu de Casaca</h2>
-                <h3>Amazonas</h3>
+                <figure><img src="assets/Cuscuz Nordestino.jpg" alt=""></figure>
+                <h2>Cuscuz Nordestino</h2>
+                <h3>Nordeste</h3>
                 <button onclick="abrirModal('modalTacaca4')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalTacaca4">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
-                    <h2>Pirarucu de Casaca</h2>
-                    <p>O prato utiliza o pirarucu, um dos maiores peixes de água doce da Amazônia. O peixe é preparado
-                        em camadas com ingredientes como farinha, banana e outros acompanhamentos. A receita mostra como
-                        os peixes dos rios amazônicos foram incorporados a preparações mais elaboradas ao longo do
-                        tempo.</p>
+                    <h2>Cuscuz Nordestino</h2>
+                    <p>Feito principalmente com milho, o cuscuz tornou-se um alimento fundamental em muitas partes do Nordeste. Sua preparação e consumo fazem parte da alimentação cotidiana e das tradições familiares. É um exemplo de como o milho ganhou diferentes formas de preparo dentro da culinária brasileira.</p>
                 </div>
             </div>
 
             <div class="cards">
-                <figure><img src="assets/Açaí com farinha de mandioca.jpg" alt=""></figure>
-                <h2>Açaí com farinha de mandioca</h2>
-                <h3>Pará e Amazonas</h3>
+                <figure><img src="assets/Moqueca Baiana.jpg" alt=""></figure>
+                <h2>Moqueca Baiana</h2>
+                <h3>Bahia</h3>
                 <button onclick="abrirModal('modalTacaca5')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalTacaca5">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
-                    <h2>Açaí com farinha de mandioca</h2>
-                    <p>Muito diferente do açaí popularizado como sobremesa no restante do país, na Amazônia ele
-                        tradicionalmente pode ser consumido como alimento junto com farinha e acompanhado de peixe ou
-                        outros alimentos. O fruto faz parte da alimentação amazônica há muito tempo e está profundamente
-                        ligado aos costumes das comunidades da região.</p>
+                    <h2>Moqueca Baiana</h2>
+                    <p>A moqueca baiana combina peixes ou frutos do mar, leite de coco, azeite de dendê e temperos. Sua formação resulta do encontro de diferentes tradições culinárias, principalmente indígenas, africanas e portuguesas. É uma das preparações mais representativas da cozinha do litoral baiano.</p>
                 </div>
             </div>
         </div>
@@ -557,42 +543,35 @@
             <span></span>
         </div>
         <div class="titulo-sobre2">
-            <h1>NORTE</h1>
-            <h4>A força da Amazônia na culinária brasileira</h4>
+            <h1>NORDESTE</h1>
+            <h4>Cultura, natureza e um povo de força</h4>
         </div>
 
         <div class="sobre-linha">
             <div class="sobre-conteudo-wrapper">
                 <div class="conteudo-sobre">
                     <p>
-                        A culinária do Norte é um verdadeiro tesouro da Amazônia, marcada pela riqueza natural da região
-                        e pela
-                        forte influência dos povos indígenas, ribeirinhos e comunidades tradicionais.
+                        O Nordeste é a região mais seca e ensolarada do Brasil, conhecida por sua rica cultura, belezas naturais e um povo acolhedor e cheio de tradições. Abrange nove estados: Maranhão, Piauí, Ceará, Rio Grande do Norte, Paraíba, Pernambuco, Alagoas, Sergipe e Bahia. É uma terra de contrastes, onde o sertão e o litoral se encontram, e onde se preservam fortes manifestações culturais, como o forró, o artesanato, a culinária típica e o cordel.
 
-                        Aqui, ingredientes como o <strong>tucupi</strong>, o <strong>jambu</strong>, o
-                        <strong>açaí</strong>, os peixes de água doce e a mandioca ganham
-                        destaque e contam histórias de <strong>resistência, cultura e conexão com a floresta.</strong>
                     </p>
                 </div>
 
                 <div class="box-sobre">
                     <div class="box-sobre-ft">
                         <figure>
-                            <img src="assets/icone-boxsobre.png" alt="">
+                            <img src="assets/img-box-sobre-nordeste.png" alt="">
                         </figure>
                     </div>
                     <div class="box-sobre-texto">
-                        <h2>Muito mais que comida</h2>
-                        <p>A culinária nortista é uma expressão da identidade amazônica. Ela carrega saberes ancestrais,
-                            tradições
-                            familiares e o modo de vida de um povo que vive em harmonia com a natureza.</p>
+                        <h2>Sabia que?</h2>
+                        <p>O Nordeste tem um dos maiores patrimônios culturais do Brasil, com festas como o São João, seus artesanatos únicos e paisagens incríveis, como as dunas de Natal, os Lençóis Maranhenses e o Cânion do Xingó.</p>
                     </div>
                 </div>
             </div>
 
             <div class="img-sobre">
                 <figure>
-                    <img src="assets/img-sobre-norte.png" alt="">
+                    <img src="assets/img-sobre-nordeste.png" alt="">
                 </figure>
             </div>
         </div>
