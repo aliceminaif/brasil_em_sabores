@@ -57,15 +57,15 @@
         <section id="cardapio">
             <div class="texto-cardapio">
                 <h1>Regiões brasileiras</h1>
-                <p>Escolha sua região<span class="f">  F</span> 
-                   <span class="a">A</span> 
-                   <span class="v">V</span> 
-                   <span class="o">O</span>
-                   <span class="r">R</span>
-                   <span class="i">I</span>
-                   <span class="t">T</span>
-                   <span class="o">A</span>
-                   <span class="!">!</span>
+                <p>Escolha sua região<span class="f"> F</span>
+                    <span class="a">A</span>
+                    <span class="v">V</span>
+                    <span class="o">O</span>
+                    <span class="r">R</span>
+                    <span class="i">I</span>
+                    <span class="t">T</span>
+                    <span class="o">A</span>
+                    <span class="!">!</span>
                 </p>
             </div>
             <div class="card-container">
@@ -142,6 +142,33 @@
         </section>
 
         <section id="famosas">
+            <div class="titulo">
+                <span></span>
+                <h1>🇧🇷 Sabores que conquistaram o Brasil</h1>
+                <span></span>
+            </div>
+
+            <div class="card-container-famosas">
+                <div class="card-famosas">
+                    <div class="cards">
+                        <figure><img src="assets/Pinhão.webp" alt=""></figure>
+                        <h2>Brigadeiro</h2>
+                        <h3>Sudeste</h3>
+                        <button onclick="abrirModal('modalTacaca5')">Conheça mais →</button>
+                    </div>
+                    <div class="modal" id="modalTacaca5">
+                        <div class="modal-conteudo">
+                            <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
+                            <h2>Pinhão</h2>
+                            <p>O pinhão é a semente da araucária, árvore característica da paisagem sulista. Seu consumo
+                                possui raízes anteriores à imigração europeia, estando ligado aos povos indígenas que já
+                                utilizavam a semente como alimento. Posteriormente, o pinhão foi incorporado a inúmeras
+                                receitas da culinária regional.</p>
+                        </div>
+                    </div>
+                </div>
+
+
 
         </section>
 
@@ -181,6 +208,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
