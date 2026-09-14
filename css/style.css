@@ -43,10 +43,7 @@ body {
     background-color: var(--verde-escuro);
 }
 
-main {
-    /* padding-top: 95px;
-    background-color: var(--bege); */
-}
+
 
 .cabecalho {
     width: 95%;
@@ -731,7 +728,7 @@ button:hover {
 #famosas {
     width: 100%;
     height: auto;
-    background-color: var(--verde-escuro);
+    background-color: var(--laranja);
 }
 
 .titulo {
@@ -744,8 +741,12 @@ button:hover {
     width: 100%;
     height: 330px;
     /* border: solid aqua 1px; */
-    padding-left: 10px;
-    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+
 
 }
 
@@ -767,6 +768,20 @@ button:hover {
 
 }
 
+.card-famosas h2 {
+    color: rgb(255, 132, 0);
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+    /* padding-top: 10px; */
+
+}
+
+.card-famosas h3 {
+    color: rgb(255, 170, 0);
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+}
+
 .card-famosas figure {
     width: 100%;
     height: 150px;
@@ -781,17 +796,17 @@ button:hover {
 }
 
 .cards button {
-    background-color: var(--verde-brasil);
+    background-color: rgb(251, 176, 102);
     width: 95%;
     border-radius: 10px;
     height: 40px;
     border: none;
-    color: whitesmoke;
+    color: black;
     transition: transform 0.3s ease;
     cursor: pointer;
     font-family: var(--fonte-texto);
     font-size: 17px;
-    margin-top: 5px;
+
 
 
 
@@ -820,7 +835,7 @@ button:hover {
 }
 
 .modal-conteudo {
-    background-color: #003840;
+    background-color: rgb(255, 214, 139);
 
     width: 600px;
     max-width: 80%;
@@ -835,12 +850,12 @@ button:hover {
 }
 
 .modal-conteudo h2 {
-    color: rgb(83, 219, 212);
+    color: black;
     font-family: var(--fonte-principal)
 }
 
 .modal-conteudo p {
-    color: rgb(33, 194, 209);
+    color: black;
     line-height: 1.6;
     font-family: var(--fonte-texto);
 }
@@ -858,7 +873,7 @@ button:hover {
 
     cursor: pointer;
 
-    color: rgb(116, 254, 242);
+    color: black;
 }
 
 #sobre {
