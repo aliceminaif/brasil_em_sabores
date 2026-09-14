@@ -731,7 +731,7 @@ button:hover {
 #famosas {
     width: 100%;
     height: auto;
-    background-color: rebeccapurple;
+    background-color: var(--verde-escuro);
 }
 
 .titulo {
@@ -742,20 +742,29 @@ button:hover {
 
 .card-container-famosas {
     width: 100%;
-    height: 300px;
+    height: 330px;
     /* border: solid aqua 1px; */
     padding-left: 10px;
     padding-right: 10px;
-    
+
 }
 
 .card-famosas {
     width: 18%;
-    height: 98%;
+    height: 90%;
     /* border: solid 1px rgb(0, 0, 0) ; */
     text-align: center;
     border-radius: 20px;
     background-color: whitesmoke;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-famosas:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.50);
+
 }
 
 .card-famosas figure {
@@ -770,8 +779,9 @@ button:hover {
     height: 100%;
     border-radius: 20px;
 }
+
 .cards button {
-    background-color: #004038;
+    background-color: var(--verde-brasil);
     width: 95%;
     border-radius: 10px;
     height: 40px;
