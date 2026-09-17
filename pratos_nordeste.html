@@ -92,7 +92,6 @@
         .titulos {
             width: 80%;
             height: 150px;
-            /* border: aqua solid 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,23 +101,16 @@
         .titulo {
             width: 60%;
             height: 100px;
-            /* border: solid aqua 1px; */
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            /* margin-bottom: 30px; */
-
-
-
-
         }
 
         .titulo2 {
             width: 60%;
             height: 50px;
-            /* border: solid aqua 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -141,7 +133,6 @@
             width: 100px;
             height: 2px;
             background-color: var(--laranja);
-            /* padding: 5px; */
             margin: 15px;
         }
 
@@ -162,7 +153,6 @@
         .cards {
             width: 25%;
             height: 340px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             background-color: #F0E0B0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
@@ -178,7 +168,6 @@
         .cards figure {
             width: 100%;
             height: 200px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             overflow: hidden;
         }
@@ -250,6 +239,8 @@
 
             width: 600px;
             max-width: 80%;
+            max-height: 80vh;
+            overflow-y: auto;
 
             padding: 40px;
 
@@ -262,13 +253,49 @@
 
         .modal-conteudo h2 {
             color: var(--marrom-escuro);
-            font-family: var(--fonte-principal)
+            font-family: var(--fonte-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Hierarquia: os subtítulos (Ingredientes / Modo de preparo)
+           ficam maiores do que o conteúdo dentro deles */
+        .modal-conteudo h3 {
+            color: #C04000;
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         .modal-conteudo p {
             color: #713010;
             line-height: 1.6;
             font-family: var(--fonte-texto);
+            font-size: 15px;
+        }
+
+        .modal-conteudo ul,
+        .modal-conteudo ol {
+            padding-left: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-conteudo ul li,
+        .modal-conteudo ol li {
+            color: #713010;
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .modal-conteudo .importancia {
+            margin-top: 15px;
+        }
+
+        .modal-conteudo .importancia strong {
+            color: #C04000;
         }
 
         .fechar {
@@ -399,7 +426,6 @@
         .box-sobre-texto h2 {
             font-family: var(--fonte-principal);
             color: #713010;
-            /* padding-top: 10px; */
             padding-left: 10px;
         }
 
@@ -459,7 +485,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
                     <h2>Acarajé</h2>
-                    <p>O acarajé é um bolinho feito de feijão-fradinho e frito no azeite de dendê. Sua história está ligada à África Ocidental e à população africana escravizada que trouxe seus conhecimentos culinários para o Brasil. Além de alimento, possui importância religiosa no candomblé. O Ofício das Baianas de Acarajé foi reconhecido pelo Iphan como Patrimônio Cultural do Brasil em 2005.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Feijão-fradinho</li>
+                        <li>Cebola</li>
+                        <li>Sal</li>
+                        <li>Azeite de dendê</li>
+                        <li>Camarão seco, vatapá e salada para rechear</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Deixe o feijão de molho e retire as cascas.</li>
+                        <li>Triture com cebola e sal até formar uma massa.</li>
+                        <li>Modele os bolinhos.</li>
+                        <li>Frite em azeite de dendê.</li>
+                        <li>Abra e recheie.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O acarajé possui raízes na África Ocidental
+                        e grande importância cultural e religiosa na Bahia. O Ofício das Baianas de Acarajé é
+                        Patrimônio Cultural do Brasil desde 2005.</p>
                 </div>
             </div>
 
@@ -473,7 +520,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
                     <h2>Baião de Dois</h2>
-                    <p>O baião de dois combina principalmente arroz e feijão, podendo levar carne-seca, queijo coalho e manteiga de garrafa. Tornou-se símbolo da cozinha sertaneja e representa uma alimentação baseada em ingredientes acessíveis e resistentes às condições do interior nordestino.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Arroz</li>
+                        <li>Feijão</li>
+                        <li>Carne-seca</li>
+                        <li>Queijo coalho</li>
+                        <li>Cebola</li>
+                        <li>Alho</li>
+                        <li>Manteiga de garrafa</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Cozinhe o feijão.</li>
+                        <li>Refogue alho e cebola.</li>
+                        <li>Acrescente o arroz e o feijão.</li>
+                        <li>Misture a carne-seca.</li>
+                        <li>Finalize com queijo coalho e manteiga de garrafa.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O baião de dois se tornou símbolo da
+                        cozinha sertaneja. A combinação de arroz e feijão representa uma alimentação prática baseada
+                        em ingredientes acessíveis.</p>
                 </div>
             </div>
 
@@ -487,7 +557,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
                     <h2>Carne de Sol com Macaxeira</h2>
-                    <p>A carne de sol surgiu como uma forma tradicional de conservar a carne por meio do sal e da secagem. A técnica era especialmente importante em regiões onde a conservação da carne fresca era difícil. Servida com macaxeira, tornou-se um dos pratos mais conhecidos da culinária sertaneja.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Carne de sol</li>
+                        <li>Macaxeira</li>
+                        <li>Manteiga de garrafa</li>
+                        <li>Cebola</li>
+                        <li>Sal e temperos</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Dessalgue a carne, se necessário.</li>
+                        <li>Corte e frite ou grelhe.</li>
+                        <li>Cozinhe a macaxeira até ficar macia.</li>
+                        <li>Doure a macaxeira na manteiga.</li>
+                        <li>Sirva junto com a carne.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A carne de sol surgiu como uma forma
+                        tradicional de conservação por meio do sal e da secagem. Com a macaxeira, tornou-se um prato
+                        muito conhecido da culinária sertaneja.</p>
                 </div>
             </div>
 
@@ -501,7 +592,29 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
                     <h2>Vatapá</h2>
-                    <p>O vatapá é um creme preparado tradicionalmente com ingredientes como pão ou farinha, camarão, leite de coco, amendoim, castanha e azeite de dendê. Sua história está relacionada principalmente às influências africanas na culinária baiana, combinadas a ingredientes disponíveis no Brasil.
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Pão ou farinha</li>
+                        <li>Camarão</li>
+                        <li>Leite de coco</li>
+                        <li>Amendoim</li>
+                        <li>Castanha</li>
+                        <li>Azeite de dendê</li>
+                        <li>Cebola e temperos</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Hidrate o pão ou misture a farinha com líquido.</li>
+                        <li>Bata com leite de coco, amendoim e castanha.</li>
+                        <li>Leve ao fogo com o camarão e os temperos.</li>
+                        <li>Mexa até engrossar.</li>
+                        <li>Finalize com dendê.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O vatapá representa principalmente a
+                        influência africana na culinária baiana, combinada aos ingredientes disponíveis no Brasil.
                     </p>
                 </div>
             </div>
@@ -516,7 +629,27 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
                     <h2>Cuscuz Nordestino</h2>
-                    <p>Feito principalmente com milho, o cuscuz tornou-se um alimento fundamental em muitas partes do Nordeste. Sua preparação e consumo fazem parte da alimentação cotidiana e das tradições familiares. É um exemplo de como o milho ganhou diferentes formas de preparo dentro da culinária brasileira.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Flocos de milho</li>
+                        <li>Água</li>
+                        <li>Sal</li>
+                        <li>Manteiga</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Misture o milho com água e sal.</li>
+                        <li>Deixe hidratar por alguns minutos.</li>
+                        <li>Coloque na cuscuzeira.</li>
+                        <li>Cozinhe no vapor até ficar macio.</li>
+                        <li>Sirva com manteiga ou acompanhamentos.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O cuscuz de milho é fundamental na
+                        alimentação de muitas famílias nordestinas e faz parte do cotidiano e das tradições
+                        familiares da região.</p>
                 </div>
             </div>
 
@@ -530,7 +663,31 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
                     <h2>Moqueca Baiana</h2>
-                    <p>A moqueca baiana combina peixes ou frutos do mar, leite de coco, azeite de dendê e temperos. Sua formação resulta do encontro de diferentes tradições culinárias, principalmente indígenas, africanas e portuguesas. É uma das preparações mais representativas da cozinha do litoral baiano.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Peixe ou frutos do mar</li>
+                        <li>Leite de coco</li>
+                        <li>Azeite de dendê</li>
+                        <li>Tomate</li>
+                        <li>Cebola</li>
+                        <li>Pimentão</li>
+                        <li>Coentro</li>
+                        <li>Limão</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Tempere o peixe com limão e sal.</li>
+                        <li>Monte camadas de peixe, tomate, cebola e pimentão.</li>
+                        <li>Acrescente o leite de coco.</li>
+                        <li>Cozinhe até o peixe ficar macio.</li>
+                        <li>Finalize com dendê e coentro.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A moqueca baiana representa o encontro de
+                        tradições indígenas, africanas e portuguesas e é um dos pratos mais marcantes do litoral
+                        baiano.</p>
                 </div>
             </div>
         </div>
@@ -551,7 +708,11 @@
             <div class="sobre-conteudo-wrapper">
                 <div class="conteudo-sobre">
                     <p>
-                        O Nordeste é a região mais seca e ensolarada do Brasil, conhecida por sua rica cultura, belezas naturais e um povo acolhedor e cheio de tradições. Abrange nove estados: Maranhão, Piauí, Ceará, Rio Grande do Norte, Paraíba, Pernambuco, Alagoas, Sergipe e Bahia. É uma terra de contrastes, onde o sertão e o litoral se encontram, e onde se preservam fortes manifestações culturais, como o forró, o artesanato, a culinária típica e o cordel.
+                        O Nordeste é a região mais seca e ensolarada do Brasil, conhecida por sua rica cultura, belezas
+                        naturais e um povo acolhedor e cheio de tradições. Abrange nove estados: Maranhão, Piauí, Ceará,
+                        Rio Grande do Norte, Paraíba, Pernambuco, Alagoas, Sergipe e Bahia. É uma terra de contrastes,
+                        onde o sertão e o litoral se encontram, e onde se preservam fortes manifestações culturais, como
+                        o forró, o artesanato, a culinária típica e o cordel.
 
                     </p>
                 </div>
@@ -564,7 +725,9 @@
                     </div>
                     <div class="box-sobre-texto">
                         <h2>Sabia que?</h2>
-                        <p>O Nordeste tem um dos maiores patrimônios culturais do Brasil, com festas como o São João, seus artesanatos únicos e paisagens incríveis, como as dunas de Natal, os Lençóis Maranhenses e o Cânion do Xingó.</p>
+                        <p>O Nordeste tem um dos maiores patrimônios culturais do Brasil, com festas como o São João,
+                            seus artesanatos únicos e paisagens incríveis, como as dunas de Natal, os Lençóis
+                            Maranhenses e o Cânion do Xingó.</p>
                     </div>
                 </div>
             </div>
