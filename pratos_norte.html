@@ -92,7 +92,6 @@
         .titulos {
             width: 80%;
             height: 150px;
-            /* border: aqua solid 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,23 +101,16 @@
         .titulo {
             width: 60%;
             height: 100px;
-            /* border: solid aqua 1px; */
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            /* margin-bottom: 30px; */
-
-
-
-
         }
 
         .titulo2 {
             width: 60%;
             height: 50px;
-            /* border: solid aqua 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -141,7 +133,6 @@
             width: 100px;
             height: 2px;
             background-color: #f2b705;
-            /* padding: 5px; */
             margin: 15px;
         }
 
@@ -161,7 +152,6 @@
         .cards {
             width: 25%;
             height: 340px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             background-color: whitesmoke;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
@@ -177,7 +167,6 @@
         .cards figure {
             width: 100%;
             height: 200px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             overflow: hidden;
         }
@@ -249,6 +238,8 @@
 
             width: 600px;
             max-width: 80%;
+            max-height: 80vh;
+            overflow-y: auto;
 
             padding: 40px;
 
@@ -261,13 +252,49 @@
 
         .modal-conteudo h2 {
             color: #4B2E2B;
-            font-family: var(--fonte-principal)
+            font-family: var(--fonte-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Hierarquia: os subtítulos (Ingredientes / Modo de preparo)
+           ficam maiores do que o conteúdo dentro deles */
+        .modal-conteudo h3 {
+            color: var(--verde-escuro);
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         .modal-conteudo p {
             color: #3b2925;
             line-height: 1.6;
             font-family: var(--fonte-texto);
+            font-size: 15px;
+        }
+
+        .modal-conteudo ul,
+        .modal-conteudo ol {
+            padding-left: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-conteudo ul li,
+        .modal-conteudo ol li {
+            color: #3b2925;
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .modal-conteudo .importancia {
+            margin-top: 15px;
+        }
+
+        .modal-conteudo .importancia strong {
+            color: var(--verde-escuro);
         }
 
         .fechar {
@@ -398,7 +425,6 @@
         .box-sobre-texto h2 {
             font-family: var(--fonte-principal);
             color: var(--verde-escuro);
-            /* padding-top: 10px; */
             padding-left: 10px;
         }
 
@@ -457,11 +483,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
                     <h2>Tacacá</h2>
-                    <p>O tacacá é preparado com tucupi, goma de mandioca, jambu e camarão seco. Suas raízes estão
-                        ligadas aos conhecimentos indígenas sobre a mandioca. Com o tempo, tornou-se um dos símbolos da
-                        alimentação amazônica e passou a fazer parte do cotidiano das cidades, especialmente vendido
-                        pelas tacacazeiras. Em 2025, o Iphan reconheceu o Ofício das Tacacazeiras da Região Norte como
-                        Patrimônio Cultural do Brasil.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Tucupi</li>
+                        <li>Goma de mandioca</li>
+                        <li>Jambu</li>
+                        <li>Camarão seco</li>
+                        <li>Alho e pimenta a gosto</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Ferva o tucupi com alho e temperos.</li>
+                        <li>Cozinhe o jambu até ficar macio.</li>
+                        <li>Prepare a goma de mandioca até formar um caldo espesso.</li>
+                        <li>Monte em uma cuia com tucupi, goma, jambu e camarão.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O tacacá tem raízes nos conhecimentos
+                        indígenas sobre a mandioca e se tornou um dos principais símbolos da culinária amazônica. O
+                        ofício das tacacazeiras da Região Norte foi reconhecido pelo Iphan como Patrimônio Cultural
+                        do Brasil.</p>
                 </div>
             </div>
 
@@ -475,9 +518,29 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
                     <h2>Pato no Tucupi</h2>
-                    <p>O prato combina pato assado, tucupi e jambu. O tucupi é produzido a partir da mandioca-brava,
-                        seguindo técnicas tradicionais de processamento. A receita representa a mistura entre
-                        conhecimentos indígenas e ingredientes incorporados posteriormente à culinária amazônica.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>1 pato</li>
+                        <li>Tucupi</li>
+                        <li>Jambu</li>
+                        <li>Alho</li>
+                        <li>Cebola</li>
+                        <li>Pimenta e sal</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Tempere e asse o pato até dourar.</li>
+                        <li>Corte a carne em pedaços.</li>
+                        <li>Ferva o tucupi com os temperos.</li>
+                        <li>Acrescente o pato e cozinhe por alguns minutos.</li>
+                        <li>Finalize com o jambu.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O prato combina técnicas e ingredientes de
+                        diferentes tradições. O tucupi, produzido a partir da mandioca-brava, representa a presença
+                        dos conhecimentos indígenas na culinária paraense.</p>
                 </div>
             </div>
 
@@ -491,9 +554,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
                     <h2>Maniçoba</h2>
-                    <p>A maniçoba utiliza folhas de mandioca, que precisam passar por um longo processo de cozimento
-                        para eliminar sua toxicidade. Depois, são acrescentadas carnes e outros ingredientes. É
-                        frequentemente associada à culinária paraense e tem forte presença em festas e celebrações.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Folhas de mandioca trituradas</li>
+                        <li>Carne-seca</li>
+                        <li>Linguiça</li>
+                        <li>Bacon</li>
+                        <li>Costelinha ou outras carnes</li>
+                        <li>Temperos</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Cozinhe as folhas de mandioca por vários dias, seguindo o preparo tradicional.</li>
+                        <li>Acrescente as carnes e os temperos.</li>
+                        <li>Cozinhe lentamente até tudo ficar bem apurado.</li>
+                        <li>Sirva quente com arroz e farinha.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A maniçoba é fortemente associada à
+                        culinária paraense e está presente em festas e celebrações. Seu preparo tradicional também
+                        demonstra a importância dos conhecimentos sobre a mandioca.</p>
                 </div>
             </div>
 
@@ -507,10 +589,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
                     <h2>Tambaqui Assado</h2>
-                    <p>O tambaqui é um dos peixes mais importantes da alimentação amazônica. É tradicionalmente
-                        preparado assado na brasa, valorizando o sabor do próprio peixe. Seu consumo está relacionado à
-                        enorme importância dos rios para a alimentação e para o modo de vida das populações amazônicas.
-                    </p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>1 tambaqui</li>
+                        <li>Alho</li>
+                        <li>Limão</li>
+                        <li>Sal</li>
+                        <li>Pimenta</li>
+                        <li>Ervas e temperos</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Limpe o peixe e tempere com limão, sal e alho.</li>
+                        <li>Deixe marinar por alguns minutos.</li>
+                        <li>Asse na brasa ou no forno até dourar.</li>
+                        <li>Sirva com acompanhamentos.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O tambaqui é um peixe muito importante na
+                        alimentação amazônica. Seu preparo na brasa valoriza o sabor do peixe e mostra a relação da
+                        população com os rios da região.</p>
                 </div>
             </div>
 
@@ -524,10 +624,29 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
                     <h2>Pirarucu de Casaca</h2>
-                    <p>O prato utiliza o pirarucu, um dos maiores peixes de água doce da Amazônia. O peixe é preparado
-                        em camadas com ingredientes como farinha, banana e outros acompanhamentos. A receita mostra como
-                        os peixes dos rios amazônicos foram incorporados a preparações mais elaboradas ao longo do
-                        tempo.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Pirarucu</li>
+                        <li>Farinha de mandioca</li>
+                        <li>Banana</li>
+                        <li>Cebola</li>
+                        <li>Tomate</li>
+                        <li>Pimentão</li>
+                        <li>Temperos</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Cozinhe ou asse o pirarucu e desfie.</li>
+                        <li>Prepare os temperos refogados.</li>
+                        <li>Monte camadas de peixe, farinha e banana.</li>
+                        <li>Leve ao forno rapidamente para finalizar.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O prato utiliza o pirarucu, um dos grandes
+                        peixes de água doce da Amazônia. Sua preparação mostra como os peixes dos rios foram
+                        incorporados a receitas mais elaboradas.</p>
                 </div>
             </div>
 
@@ -541,10 +660,24 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
                     <h2>Açaí com farinha de mandioca</h2>
-                    <p>Muito diferente do açaí popularizado como sobremesa no restante do país, na Amazônia ele
-                        tradicionalmente pode ser consumido como alimento junto com farinha e acompanhado de peixe ou
-                        outros alimentos. O fruto faz parte da alimentação amazônica há muito tempo e está profundamente
-                        ligado aos costumes das comunidades da região.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Polpa de açaí</li>
+                        <li>Farinha de mandioca</li>
+                        <li>Peixe ou outro acompanhamento, opcional</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Coloque a polpa de açaí em uma tigela.</li>
+                        <li>Misture ou acompanhe com farinha de mandioca.</li>
+                        <li>Sirva com peixe ou outros alimentos, seguindo o costume regional.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> Na Amazônia, o açaí tradicionalmente pode
+                        ser consumido como alimento, e não apenas como sobremesa. O fruto está profundamente ligado à
+                        alimentação e aos costumes das comunidades amazônicas.</p>
                 </div>
             </div>
         </div>
