@@ -934,17 +934,20 @@ button:hover {
 #sobre {
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+
 
 
 }
 
 .foto-sobre {
-    width: 20%;
+    width: 75%;
     height: 200px;
 }
 
 .foto-sobre figure {
-    width: 50%;
+    width: 95%;
     height: 500px;
 }
 
@@ -954,9 +957,10 @@ button:hover {
 }
 
 .conteudo-sobre {
-    width: 30%;
-    height: 100px;
+    width: 50%;
+    height: 250px;
     border: 1px aqua solid;
+
 }
 .conteudo-sobre p {
     font-family: var(--fonte-texto);
