@@ -729,36 +729,85 @@ button:hover {
     width: 100%;
     height: auto;
     background-color: var(--laranja);
+    background-image: url(../assets/fundo-famosas.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .titulo {
     text-align: center;
     font-family: var(--fonte-principal);
-    color: whitesmoke;
+    color: var(--verde-escuro);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
 }
+
+.titulo span {
+    width: 100px;
+    height: 2px;
+    background-color: var(--verde-escuro);
+    margin: 25px;
+}
+
+.icon-famosas {
+    text-align: center;
+    font-family: var(--fonte-principal);
+    color: var(--verde-escuro);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 80px;
+    width: 100%;
+
+}
+
+.icon-famosas span {
+    width: 100px;
+    height: 2px;
+    background-color: var(--verde-escuro);
+    margin: 25px;
+}
+
+.icon-famosas figure {
+    width: 5%;
+    height: 10%;
+
+}
+
+.icon-famosas figure img {
+    width: 100%;
+    height: 100%;
+
+}
+
 
 .card-container-famosas {
     width: 100%;
-    height: 330px;
+    height: 390px;
     /* border: solid aqua 1px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 50px;
+
 
 
 }
 
 .card-famosas {
     width: 18%;
-    height: 90%;
+    height: 78%;
     /* border: solid 1px rgb(0, 0, 0) ; */
     text-align: center;
     border-radius: 20px;
     background-color: whitesmoke;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .card-famosas:hover {
@@ -768,19 +817,24 @@ button:hover {
 
 }
 
-.card-famosas h2 {
-    color: rgb(255, 132, 0);
+.cards h2 {
+    font-family: var(--fonte-principal);
+    color: #713010;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+.cards h4 {
     font-family: var(--fonte-texto);
+    color: #de995c;
     font-size: 20px;
-    /* padding-top: 10px; */
-
-}
-
-.card-famosas h3 {
-    color: rgb(255, 170, 0);
-    font-family: var(--fonte-texto);
+    text-align: center;
     font-size: 18px;
+
 }
+
+
 
 .card-famosas figure {
     width: 100%;
@@ -796,16 +850,17 @@ button:hover {
 }
 
 .cards button {
-    background-color: rgb(251, 176, 102);
+    background-color: var(--verde-escuro);
     width: 95%;
     border-radius: 10px;
     height: 40px;
     border: none;
-    color: black;
+    color: rgb(255, 255, 255);
     transition: transform 0.3s ease;
     cursor: pointer;
     font-family: var(--fonte-texto);
     font-size: 17px;
+    margin-top: 15px;
 
 
 
