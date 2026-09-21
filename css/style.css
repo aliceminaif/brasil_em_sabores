@@ -748,7 +748,7 @@ button:hover {
 .titulo span {
     width: 100px;
     height: 2px;
-    background-color: var(--verde-escuro);
+    background-color: var(--amarelo-brasil);
     margin: 25px;
 }
 
@@ -764,12 +764,7 @@ button:hover {
 
 }
 
-.icon-famosas span {
-    width: 100px;
-    height: 2px;
-    background-color: var(--verde-escuro);
-    margin: 25px;
-}
+
 
 .icon-famosas figure {
     width: 5%;
@@ -931,45 +926,6 @@ button:hover {
     color: black;
 }
 
-#sobre {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-
-
-
-}
-
-.foto-sobre {
-    width: 75%;
-    height: 200px;
-}
-
-.foto-sobre figure {
-    width: 95%;
-    height: 500px;
-}
-
-.foto-sobre figure img {
-    width: 100%;
-    height: 100%;
-}
-
-.conteudo-sobre {
-    width: 50%;
-    height: 250px;
-    border: 1px aqua solid;
-
-}
-.conteudo-sobre p {
-    font-family: var(--fonte-texto);
-    font-size: 20px;
-}
-.titulo-sobre h1 {
-    font-family: var(--fonte-principal);
-    color: var(--verde-brasil);
-}
 
 footer {
     width: 100%;
