@@ -92,7 +92,6 @@
         .titulos {
             width: 80%;
             height: 150px;
-            /* border: aqua solid 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,23 +101,16 @@
         .titulo {
             width: 60%;
             height: 100px;
-            /* border: solid aqua 1px; */
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            /* margin-bottom: 30px; */
-
-
-
-
         }
 
         .titulo2 {
             width: 60%;
             height: 50px;
-            /* border: solid aqua 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -141,7 +133,6 @@
             width: 100px;
             height: 2px;
             background-color: #f1aba2;
-            /* padding: 5px; */
             margin: 15px;
         }
 
@@ -162,7 +153,6 @@
         .cards {
             width: 25%;
             height: 340px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             background-color: #FACE98;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
@@ -178,7 +168,6 @@
         .cards figure {
             width: 100%;
             height: 200px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             overflow: hidden;
         }
@@ -250,6 +239,8 @@
 
             width: 600px;
             max-width: 80%;
+            max-height: 80vh;
+            overflow-y: auto;
 
             padding: 40px;
 
@@ -262,13 +253,49 @@
 
         .modal-conteudo h2 {
             color: rgb(255, 208, 194);
-            font-family: var(--fonte-principal)
+            font-family: var(--fonte-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Hierarquia: os subtítulos (Ingredientes / Modo de preparo)
+           ficam maiores do que o conteúdo dentro deles */
+        .modal-conteudo h3 {
+            color: #FFD0C2;
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         .modal-conteudo p {
             color: #ffbd9c;
             line-height: 1.6;
             font-family: var(--fonte-texto);
+            font-size: 15px;
+        }
+
+        .modal-conteudo ul,
+        .modal-conteudo ol {
+            padding-left: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-conteudo ul li,
+        .modal-conteudo ol li {
+            color: #ffbd9c;
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .modal-conteudo .importancia {
+            margin-top: 15px;
+        }
+
+        .modal-conteudo .importancia strong {
+            color: #FFD0C2;
         }
 
         .fechar {
@@ -400,14 +427,12 @@
             font-family: var(--fonte-principal);
             color: #7B1605;
             padding-top: 10px;
-            /* padding-left: 10px; */
         }
 
         .box-sobre-texto p {
             font-family: var(--fonte-texto);
             color: #7B1605;
             font-size: 14px;
-            /* padding-left: 10px; */
         }
 
         .img-sobre {
@@ -459,7 +484,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
                     <h2>Empadão Goiano</h2>
-                    <p>O empadão goiano é uma grande torta recheada com ingredientes como frango, linguiça, queijo, azeitona e guariroba. Tornou-se um dos símbolos da culinária goiana e possui forte presença nas cidades históricas do estado.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Farinha de trigo</li>
+                        <li>Ovos</li>
+                        <li>Manteiga</li>
+                        <li>Frango</li>
+                        <li>Linguiça</li>
+                        <li>Queijo</li>
+                        <li>Azeitona</li>
+                        <li>Guariroba</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Prepare uma massa com farinha, manteiga e ovos.</li>
+                        <li>Refogue o frango e a linguiça.</li>
+                        <li>Acrescente queijo, azeitona e guariroba.</li>
+                        <li>Coloque o recheio na massa.</li>
+                        <li>Cubra e asse até dourar.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O empadão é um dos símbolos da culinária
+                        goiana e possui forte presença na cultura e nas cidades históricas de Goiás.</p>
                 </div>
             </div>
 
@@ -473,7 +521,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
                     <h2>Arroz com Pequi</h2>
-                    <p>O pequi é um fruto característico do Cerrado e possui grande importância cultural para Goiás. Seu sabor marcante tornou o arroz com pequi uma das preparações mais conhecidas do estado. O prato representa a relação entre a culinária goiana e os produtos encontrados no bioma.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Arroz</li>
+                        <li>Pequi</li>
+                        <li>Alho</li>
+                        <li>Cebola</li>
+                        <li>Óleo</li>
+                        <li>Sal</li>
+                        <li>Água</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Refogue alho, cebola e pequi.</li>
+                        <li>Acrescente o arroz.</li>
+                        <li>Cubra com água.</li>
+                        <li>Cozinhe até o arroz ficar macio.</li>
+                        <li>Retire os caroços do pequi com cuidado ao comer.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O pequi é característico do Cerrado e
+                        possui grande importância cultural em Goiás. O prato representa a relação entre a culinária
+                        goiana e os produtos do bioma.</p>
                 </div>
             </div>
 
@@ -487,7 +558,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
                     <h2>Galinhada com Pequi</h2>
-                    <p>A galinhada já é uma preparação tradicional baseada em arroz e frango. Em Goiás, o prato ganhou uma identidade própria com a adição do pequi. Essa combinação tornou-se uma representação da culinária rural e dos ingredientes do Cerrado.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Frango</li>
+                        <li>Arroz</li>
+                        <li>Pequi</li>
+                        <li>Alho</li>
+                        <li>Cebola</li>
+                        <li>Açafrão</li>
+                        <li>Sal e pimenta</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Tempere e doure o frango.</li>
+                        <li>Refogue com alho e cebola.</li>
+                        <li>Acrescente o pequi e o arroz.</li>
+                        <li>Cubra com água.</li>
+                        <li>Cozinhe até o arroz ficar macio.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A galinhada ganhou uma identidade própria
+                        em Goiás com a presença do pequi, tornando-se uma representação da culinária rural e dos
+                        ingredientes do Cerrado.</p>
                 </div>
             </div>
 
@@ -501,8 +595,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
                     <h2>Pamonha</h2>
-                    <p>A pamonha é feita principalmente com milho verde, preparado e cozido geralmente dentro da própria palha. Sua origem está relacionada a conhecimentos indígenas, e a receita ganhou grande importância na cultura rural de Goiás. O próprio nome é associado ao tupi pamunã.
-                    </p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Milho verde</li>
+                        <li>Açúcar ou sal</li>
+                        <li>Leite</li>
+                        <li>Queijo, opcional</li>
+                        <li>Palhas do milho</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Retire os grãos das espigas.</li>
+                        <li>Bata ou rale o milho.</li>
+                        <li>Misture com os demais ingredientes.</li>
+                        <li>Coloque a massa nas palhas.</li>
+                        <li>Amarre e cozinhe em água fervente.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A pamonha está relacionada a conhecimentos
+                        indígenas e se tornou muito importante na cultura rural de Goiás. O nome é associado ao tupi
+                        pamunã.</p>
                 </div>
             </div>
 
@@ -516,7 +630,31 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
                     <h2>Caldo de Piranha</h2>
-                    <p>Preparado com piranha e outros temperos, o caldo está ligado à forte presença dos rios e do Pantanal na alimentação regional. O consumo de peixes de água doce é uma característica marcante da culinária do Centro-Oeste.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Piranha limpa</li>
+                        <li>Tomate</li>
+                        <li>Cebola</li>
+                        <li>Alho</li>
+                        <li>Pimentão</li>
+                        <li>Cheiro-verde</li>
+                        <li>Água</li>
+                        <li>Sal e pimenta</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Cozinhe a piranha em água com os temperos.</li>
+                        <li>Retire o peixe e desfie a carne.</li>
+                        <li>Coe o caldo para retirar as espinhas.</li>
+                        <li>Volte a carne ao caldo.</li>
+                        <li>Cozinhe por mais alguns minutos e sirva quente.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O caldo está ligado à presença dos rios e
+                        do Pantanal na alimentação regional. O consumo de peixes de água doce é uma característica
+                        marcante do Centro-Oeste.</p>
                 </div>
             </div>
 
@@ -530,7 +668,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
                     <h2>Mojica de Pintado</h2>
-                    <p>A mojica é um ensopado preparado com pintado, mandioca e temperos. O prato representa bem a relação entre os peixes dos rios e a mandioca, dois elementos muito importantes na alimentação tradicional do Centro-Oeste.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Pintado</li>
+                        <li>Mandioca</li>
+                        <li>Tomate</li>
+                        <li>Cebola</li>
+                        <li>Alho</li>
+                        <li>Pimentão</li>
+                        <li>Cheiro-verde</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Corte o peixe e a mandioca.</li>
+                        <li>Refogue os temperos.</li>
+                        <li>Acrescente a mandioca e água.</li>
+                        <li>Quando estiver quase macia, coloque o peixe.</li>
+                        <li>Cozinhe até tudo ficar macio.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A mojica representa a relação entre os
+                        peixes dos rios e a mandioca, dois elementos importantes da alimentação tradicional do
+                        Centro-Oeste.</p>
                 </div>
             </div>
         </div>

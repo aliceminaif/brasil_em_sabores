@@ -93,7 +93,6 @@
         .titulos {
             width: 80%;
             height: 150px;
-            /* border: aqua solid 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,14 +104,11 @@
         .titulo {
             width: 60%;
             height: 100px;
-            /* border: solid aqua 1px; */
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            /* margin-bottom: 30px; */
-            /* padding-top: 10px; */
 
 
 
@@ -122,7 +118,6 @@
         .titulo2 {
             width: 60%;
             height: 50px;
-            /* border: solid aqua 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -147,7 +142,6 @@
             width: 100px;
             height: 2px;
             background-color: #001486;
-            /* padding: 5px; */
             margin: 15px;
         }
 
@@ -168,7 +162,6 @@
         .cards {
             width: 25%;
             height: 340px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             background-color: whitesmoke;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
@@ -184,7 +177,6 @@
         .cards figure {
             width: 100%;
             height: 200px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             overflow: hidden;
         }
@@ -256,6 +248,8 @@
 
             width: 600px;
             max-width: 80%;
+            max-height: 80vh;
+            overflow-y: auto;
 
             padding: 40px;
 
@@ -268,13 +262,49 @@
 
         .modal-conteudo h2 {
             color: rgb(18, 18, 161);
-            font-family: var(--fonte-principal)
+            font-family: var(--fonte-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Hierarquia: os subtítulos (Ingredientes / Modo de preparo)
+           ficam maiores do que o conteúdo dentro deles */
+        .modal-conteudo h3 {
+            color: rgb(18, 18, 161);
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         .modal-conteudo p {
             color: rgb(0, 0, 82);
             line-height: 1.6;
             font-family: var(--fonte-texto);
+            font-size: 15px;
+        }
+
+        .modal-conteudo ul,
+        .modal-conteudo ol {
+            padding-left: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-conteudo ul li,
+        .modal-conteudo ol li {
+            color: rgb(0, 0, 82);
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .modal-conteudo .importancia {
+            margin-top: 15px;
+        }
+
+        .modal-conteudo .importancia strong {
+            color: rgb(18, 18, 161);
         }
 
         .fechar {
@@ -407,14 +437,12 @@
             font-family: var(--fonte-principal);
             color: rgb(179, 179, 255);
     
-            /* padding-left: 10px; */
         }
 
         .box-sobre-texto p {
             font-family: var(--fonte-texto);
             color: rgb(206, 206, 252);
             font-size: 14px;
-            /* padding-left: 10px; */
         }
 
         .img-sobre {
@@ -468,21 +496,67 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
                     <h2>Feijoada</h2>
-                    <p>A feijoada tornou-se um dos pratos mais conhecidos do Brasil. A versão carioca utiliza principalmente feijão-preto e carnes, acompanhados de arroz, couve e farofa. Sua história é complexa e envolve diferentes tradições culinárias, especialmente influências africanas e portuguesas, não sendo correto reduzi-la a uma única origem.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Feijão-preto</li>
+                        <li>Carne-seca</li>
+                        <li>Linguiça</li>
+                        <li>Costelinha</li>
+                        <li>Bacon</li>
+                        <li>Alho e cebola</li>
+                        <li>Folha de louro</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Cozinhe o feijão.</li>
+                        <li>Cozinhe as carnes separadamente, se necessário.</li>
+                        <li>Refogue alho e cebola.</li>
+                        <li>Junte tudo ao feijão.</li>
+                        <li>Cozinhe até o caldo engrossar.</li>
+                        <li>Sirva com arroz, couve e farofa.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A feijoada tornou-se um dos pratos mais
+                        conhecidos do Brasil. Sua formação envolve diferentes tradições culinárias, especialmente
+                        influências africanas e portuguesas.</p>
                 </div>
             </div>
 
             <div class="cards">
                 <figure><img src="assets/Pão de Queijo.jpg" alt=""></figure>
                 <h2>Pão de Queijo</h2>
-                <h3>Goiás</h3>
+                <h3>Minas Gerais</h3>
                 <button onclick="abrirModal('modalPato')">Conheça mais →</button>
             </div>
             <div class="modal" id="modalPato">
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
-                    <h2>Minas Gerais</h2>
-                    <p>O pão de queijo tornou-se um dos maiores símbolos da culinária mineira. Sua história está ligada à tradição de produção de queijos e derivados do leite em Minas Gerais, combinada ao uso do polvilho de mandioca. Com o tempo, tornou-se conhecido em todo o Brasil.</p>
+                    <h2>Pão de Queijo</h2>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Polvilho</li>
+                        <li>Queijo</li>
+                        <li>Leite</li>
+                        <li>Ovos</li>
+                        <li>Óleo</li>
+                        <li>Sal</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Aqueça o leite com o óleo.</li>
+                        <li>Misture ao polvilho.</li>
+                        <li>Acrescente os ovos e o queijo.</li>
+                        <li>Faça pequenas bolas.</li>
+                        <li>Asse até dourar.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O pão de queijo é um dos maiores símbolos
+                        da culinária mineira. Sua tradição está ligada à produção de queijos e ao uso do polvilho de
+                        mandioca, tornando-se posteriormente conhecido em todo o Brasil.</p>
                 </div>
             </div>
 
@@ -496,7 +570,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
                     <h2>Feijão Tropeiro</h2>
-                    <p>O feijão tropeiro está associado aos tropeiros, que percorriam longas distâncias transportando mercadorias. Feijão, farinha, carne e outros ingredientes formavam uma refeição prática e energética para as viagens. A tradição acabou se incorporando fortemente à culinária mineira.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Feijão cozido</li>
+                        <li>Farinha de mandioca</li>
+                        <li>Bacon</li>
+                        <li>Linguiça</li>
+                        <li>Ovos</li>
+                        <li>Couve</li>
+                        <li>Alho e cebola</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Frite o bacon e a linguiça.</li>
+                        <li>Refogue alho e cebola.</li>
+                        <li>Acrescente o feijão.</li>
+                        <li>Misture os ovos e a couve.</li>
+                        <li>Adicione a farinha aos poucos.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O prato está associado aos tropeiros, que
+                        precisavam de refeições práticas e energéticas durante longas viagens. A tradição foi
+                        incorporada à culinária mineira.</p>
                 </div>
             </div>
 
@@ -510,8 +607,32 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
                     <h2>Moqueca Capixaba</h2>
-                    <p>A moqueca capixaba é preparada tradicionalmente com peixes ou frutos do mar e temperos, sem o uso de azeite de dendê e leite de coco, diferentemente da versão baiana. A culinária capixaba recebeu influências indígenas, portuguesas e africanas, além de contribuições de imigrantes europeus.
-                    </p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Peixe</li>
+                        <li>Tomate</li>
+                        <li>Cebola</li>
+                        <li>Pimentão</li>
+                        <li>Coentro</li>
+                        <li>Alho</li>
+                        <li>Limão</li>
+                        <li>Azeite</li>
+                        <li>Sal</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Tempere o peixe com limão e sal.</li>
+                        <li>Refogue os temperos.</li>
+                        <li>Monte camadas de peixe, tomate, cebola e pimentão.</li>
+                        <li>Cozinhe até o peixe ficar macio.</li>
+                        <li>Finalize com coentro.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A moqueca capixaba possui características
+                        próprias e tradicionalmente não utiliza dendê nem leite de coco. Sua formação recebeu
+                        influências indígenas, portuguesas e africanas.</p>
                 </div>
             </div>
 
@@ -525,7 +646,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
                     <h2>Virado à Paulista</h2>
-                    <p>O virado à paulista reúne elementos como feijão, farinha de milho, arroz, bisteca, couve, ovo, banana e linguiça. Sua história está ligada à alimentação dos paulistas e às tradições rurais e de deslocamento pelo interior do estado.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Feijão</li>
+                        <li>Farinha de milho</li>
+                        <li>Arroz</li>
+                        <li>Bisteca</li>
+                        <li>Couve</li>
+                        <li>Ovo</li>
+                        <li>Banana</li>
+                        <li>Linguiça</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Prepare o feijão e misture com a farinha.</li>
+                        <li>Frite a bisteca e a linguiça.</li>
+                        <li>Refogue a couve.</li>
+                        <li>Frite o ovo e a banana.</li>
+                        <li>Sirva tudo junto com arroz.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O virado está ligado à alimentação dos
+                        paulistas e às tradições rurais e de deslocamento pelo interior de São Paulo.</p>
                 </div>
             </div>
 
@@ -539,7 +683,28 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
                     <h2>Tutu de Feijão</h2>
-                    <p>O tutu é feito com feijão e farinha de mandioca ou de milho, formando uma preparação cremosa. É associado à cozinha mineira e à tradição das refeições simples feitas com ingredientes disponíveis nas propriedades rurais.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Feijão cozido</li>
+                        <li>Farinha de mandioca ou milho</li>
+                        <li>Alho</li>
+                        <li>Cebola</li>
+                        <li>Bacon ou linguiça</li>
+                        <li>Sal</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Bata ou amasse o feijão.</li>
+                        <li>Refogue alho, cebola e bacon.</li>
+                        <li>Acrescente o feijão.</li>
+                        <li>Adicione a farinha aos poucos.</li>
+                        <li>Mexa até ficar cremoso.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O tutu é associado à cozinha mineira e às
+                        refeições simples feitas com ingredientes disponíveis nas propriedades rurais.</p>
                 </div>
             </div>
         </div>

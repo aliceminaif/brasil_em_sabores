@@ -93,7 +93,6 @@
         .titulos {
             width: 80%;
             height: 150px;
-            /* border: aqua solid 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,14 +104,11 @@
         .titulo {
             width: 60%;
             height: 100px;
-            /* border: solid aqua 1px; */
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            /* margin-bottom: 30px; */
-            /* padding-top: 10px; */
 
 
 
@@ -122,7 +118,6 @@
         .titulo2 {
             width: 60%;
             height: 50px;
-            /* border: solid aqua 1px; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -147,7 +142,6 @@
             width: 100px;
             height: 2px;
             background-color: #003937;
-            /* padding: 5px; */
             margin: 15px;
         }
 
@@ -168,7 +162,6 @@
         .cards {
             width: 25%;
             height: 340px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             background-color: #F0F0F0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
@@ -184,7 +177,6 @@
         .cards figure {
             width: 100%;
             height: 200px;
-            /* border: solid aqua 1px; */
             border-radius: 15px;
             overflow: hidden;
         }
@@ -256,6 +248,8 @@
 
             width: 600px;
             max-width: 80%;
+            max-height: 80vh;
+            overflow-y: auto;
 
             padding: 40px;
 
@@ -268,13 +262,49 @@
 
         .modal-conteudo h2 {
             color: rgb(83, 219, 212);
-            font-family: var(--fonte-principal)
+            font-family: var(--fonte-principal);
+            margin-bottom: 10px;
+        }
+
+        /* Hierarquia: os subtítulos (Ingredientes / Modo de preparo)
+           ficam maiores do que o conteúdo dentro deles */
+        .modal-conteudo h3 {
+            color: rgb(83, 219, 212);
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            font-size: 20px;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         .modal-conteudo p {
             color: rgb(33, 194, 209);
             line-height: 1.6;
             font-family: var(--fonte-texto);
+            font-size: 15px;
+        }
+
+        .modal-conteudo ul,
+        .modal-conteudo ol {
+            padding-left: 22px;
+            margin-bottom: 10px;
+        }
+
+        .modal-conteudo ul li,
+        .modal-conteudo ol li {
+            color: rgb(33, 194, 209);
+            line-height: 1.6;
+            font-family: var(--fonte-texto);
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .modal-conteudo .importancia {
+            margin-top: 15px;
+        }
+
+        .modal-conteudo .importancia strong {
+            color: rgb(83, 219, 212);
         }
 
         .fechar {
@@ -407,14 +437,12 @@
             font-family: var(--fonte-principal);
             color: rgb(101, 200, 211);
     
-            /* padding-left: 10px; */
         }
 
         .box-sobre-texto p {
             font-family: var(--fonte-texto);
             color: rgb(77, 196, 202);
             font-size: 14px;
-            /* padding-left: 10px; */
         }
 
         .img-sobre {
@@ -468,7 +496,26 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca1')">x</button>
                     <h2>Churrasco Gaúcho</h2>
-                    <p>O churrasco está profundamente ligado à história da pecuária dos pampas e ao modo de vida dos gaúchos. A carne preparada no fogo tornou-se uma tradição social e cultural que ultrapassou o Rio Grande do Sul e se espalhou pelo Brasil.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Carne bovina</li>
+                        <li>Sal grosso</li>
+                        <li>Lenha ou carvão</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Tempere a carne com sal grosso.</li>
+                        <li>Acenda a churrasqueira.</li>
+                        <li>Coloque a carne na grelha ou espeto.</li>
+                        <li>Asse lentamente, virando quando necessário.</li>
+                        <li>Corte e sirva.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O churrasco está profundamente ligado à
+                        pecuária dos pampas e ao modo de vida gaúcho. A tradição ultrapassou o Rio Grande do Sul e se
+                        espalhou pelo Brasil.</p>
                 </div>
             </div>
 
@@ -482,7 +529,31 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalPato')">x</button>
                     <h2>Barreado</h2>
-                    <p>O barreado é um cozido de carne tradicional do litoral paranaense. A carne é cozida lentamente por várias horas em uma panela bem vedada, dando origem ao nome do prato. Sua tradição está ligada às comunidades do litoral e a festas e encontros familiares.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Carne bovina</li>
+                        <li>Bacon</li>
+                        <li>Cebola</li>
+                        <li>Alho</li>
+                        <li>Cominho</li>
+                        <li>Louro</li>
+                        <li>Água</li>
+                        <li>Farinha de mandioca</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Corte a carne e tempere.</li>
+                        <li>Coloque na panela com os temperos.</li>
+                        <li>Tampe muito bem a panela.</li>
+                        <li>Cozinhe lentamente por várias horas.</li>
+                        <li>Desfie a carne e sirva com farinha e banana.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O barreado é tradicional do litoral
+                        paranaense. Seu preparo lento e em panela bem vedada faz parte da tradição das comunidades
+                        locais e de suas festas.</p>
                 </div>
             </div>
 
@@ -496,7 +567,30 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca2')">x</button>
                     <h2>Arroz de Carreteiro</h2>
-                    <p>O arroz de carreteiro surgiu associado aos carreteiros, que transportavam mercadorias em longas viagens pelo Sul. O arroz combinado com carne seca era uma refeição prática para ser preparada durante os deslocamentos.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Arroz</li>
+                        <li>Carne-seca ou charque</li>
+                        <li>Cebola</li>
+                        <li>Alho</li>
+                        <li>Tomate</li>
+                        <li>Cheiro-verde</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Dessalgue e corte a carne.</li>
+                        <li>Refogue com alho e cebola.</li>
+                        <li>Acrescente o arroz.</li>
+                        <li>Cubra com água.</li>
+                        <li>Cozinhe até o arroz ficar macio.</li>
+                        <li>Finalize com cheiro-verde.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O prato está associado aos carreteiros que
+                        transportavam mercadorias em longas viagens. A combinação de arroz e carne seca era prática
+                        para essas jornadas.</p>
                 </div>
             </div>
 
@@ -510,8 +604,31 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca3')">x</button>
                     <h2>Cuca</h2>
-                    <p>A cuca é um bolo com cobertura de farofa doce, geralmente acompanhado de frutas ou outros recheios. Sua presença no Sul está relacionada à imigração alemã, que trouxe tradições de panificação e confeitaria que foram adaptadas aos ingredientes brasileiros.
-                    </p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Farinha de trigo</li>
+                        <li>Ovos</li>
+                        <li>Leite</li>
+                        <li>Açúcar</li>
+                        <li>Manteiga</li>
+                        <li>Fermento</li>
+                        <li>Frutas, como banana</li>
+                        <li>Farofa doce</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Prepare uma massa com farinha, leite, ovos, açúcar e fermento.</li>
+                        <li>Coloque em uma forma.</li>
+                        <li>Adicione frutas por cima.</li>
+                        <li>Cubra com farofa doce.</li>
+                        <li>Asse até dourar.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> A cuca está relacionada à imigração alemã
+                        no Sul. As tradições de panificação e confeitaria foram adaptadas aos ingredientes
+                        brasileiros e incorporadas à culinária regional.</p>
                 </div>
             </div>
 
@@ -525,7 +642,29 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca4')">x</button>
                     <h2>Marreco Recheado</h2>
-                    <p>O marreco recheado está relacionado principalmente à herança gastronômica dos imigrantes alemães em Santa Catarina. A receita foi incorporada à culinária local e passou a fazer parte de festas e celebrações de comunidades de origem germânica.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>1 marreco</li>
+                        <li>Farofa para recheio</li>
+                        <li>Cebola</li>
+                        <li>Alho</li>
+                        <li>Ervas</li>
+                        <li>Sal e pimenta</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Tempere o marreco.</li>
+                        <li>Prepare a farofa com os temperos.</li>
+                        <li>Recheie a ave.</li>
+                        <li>Coloque em uma assadeira.</li>
+                        <li>Asse até ficar dourado e bem cozido.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O marreco recheado está ligado
+                        principalmente à herança gastronômica dos imigrantes alemães em Santa Catarina. A receita
+                        passou a fazer parte de festas e celebrações dessas comunidades.</p>
                 </div>
             </div>
 
@@ -539,7 +678,26 @@
                 <div class="modal-conteudo">
                     <button class="fechar" onclick="fecharModal('modalTacaca5')">x</button>
                     <h2>Pinhão</h2>
-                    <p>O pinhão é a semente da araucária, árvore característica da paisagem sulista. Seu consumo possui raízes anteriores à imigração europeia, estando ligado aos povos indígenas que já utilizavam a semente como alimento. Posteriormente, o pinhão foi incorporado a inúmeras receitas da culinária regional.</p>
+
+                    <h3>Ingredientes</h3>
+                    <ul>
+                        <li>Pinhões</li>
+                        <li>Água</li>
+                        <li>Sal, opcional</li>
+                    </ul>
+
+                    <h3>Modo de preparo</h3>
+                    <ol>
+                        <li>Lave bem os pinhões.</li>
+                        <li>Coloque em uma panela com água.</li>
+                        <li>Cozinhe até ficarem macios.</li>
+                        <li>Escorra e deixe esfriar.</li>
+                        <li>Retire a casca e sirva.</li>
+                    </ol>
+
+                    <p class="importancia"><strong>Importância:</strong> O pinhão é a semente da araucária e faz
+                        parte da paisagem e da alimentação do Sul. Seu consumo possui raízes anteriores à imigração
+                        europeia e está ligado aos povos indígenas da região.</p>
                 </div>
             </div>
         </div>
