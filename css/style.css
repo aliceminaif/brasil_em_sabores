@@ -728,11 +728,8 @@ button:hover {
 #famosas {
     width: 100%;
     height: auto;
-    background-color: var(--laranja);
-    background-image: url(../assets/fundo-famosas.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: var(--verde-claro);
+
 }
 
 .titulo {
@@ -748,7 +745,7 @@ button:hover {
 .titulo span {
     width: 100px;
     height: 2px;
-    background-color: var(--amarelo-brasil);
+    background-color: var(--laranja);
     margin: 25px;
 }
 
@@ -845,7 +842,7 @@ button:hover {
 }
 
 .cards button {
-    background-color: var(--verde-escuro);
+    background-color: var(--laranja);
     width: 95%;
     border-radius: 10px;
     height: 40px;
