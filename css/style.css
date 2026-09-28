@@ -373,7 +373,7 @@ button:hover {
     width: 100%;
     height: auto;
     padding-bottom: 80px;
-    background-color: var(--verde-claro);
+    background-color: #f4daae;
 }
 
 .titulo {
