@@ -374,6 +374,7 @@ button:hover {
     height: auto;
     padding-bottom: 80px;
     background-color: #f4daae;
+    background-image: url(../assets/fundo_famosas.png);
 }
 
 .titulo {
