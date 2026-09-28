@@ -1,152 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Brasil em Sabores </title>
+    <title>Brasil em Sabores</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header class="cabecalho">
+    <header class="cabecalho" id="topo">
         <div class="logo-header">
-            <h1> Brasil em Sabores </h1>
-
+            <h1>Brasil em Sabores</h1>
         </div>
         <div class="menu-meio">
             <nav class="menu">
-                <a href="index.html">Início</a>
-                <a href="#cardapio">Regiões</a>
-                <a href="#famosas">Destaques</a>
-                <a href="#sobre">Sobre</a>
-            </nav>
+            <a href="index.html">Início</a>
+            <a href="#cardapio">Regiões</a>
+            <a href="#famosas">Destaques</a>
+        </nav>
         </div>
-
-
     </header>
 
     <main>
-
         <section class="destaque">
             <div class="texto-destaque">
-                <h1>Descubra o <span class="verde">Brasil</span> através dos sabores que contam a história de cada <span
-                        class="verde">região</span></h1>
-                <p>Uma viagem gastronômica pelas tradições, <br>ingredientes e sabores que tornam cada <br>canto do
-                    nosso país único.</p>
+                <h1>Descubra o <span class="verde">Brasil</span> através dos sabores que contam a história de cada <span class="verde">região</span></h1>
+                <p>Uma viagem gastronômica pelas tradições, <br>ingredientes e sabores que tornam cada <br>canto do nosso país único.</p>
             </div>
             <div class="botoes">
-
                 <a href="#cardapio">
                     <button class="bt-menu">Explorar as REGIÕES</button>
                 </a>
-                <div class="destaque-img">
-
-                </div>
-
             </div>
-
+            <div class="destaque-img"></div>
         </section>
 
         <section id="cardapio">
             <div class="texto-cardapio">
                 <h1>Regiões brasileiras</h1>
-                <p>Escolha sua região<span class="f"> F</span>
-                    <span class="a">A</span>
-                    <span class="v">V</span>
-                    <span class="o">O</span>
-                    <span class="r">R</span>
-                    <span class="i">I</span>
-                    <span class="t">T</span>
-                    <span class="o">A</span>
-                    <span class="!">!</span>
-                </p>
+                <p>Escolha sua região <span class="f">F</span><span class="a">A</span><span class="v">V</span><span class="o">O</span><span class="r">R</span><span class="i">I</span><span class="t">T</span><span class="s">A</span><span class="s">!</span></p>
             </div>
             <div class="card-container">
-                <div class="card-norte">
-                    <div class="texto-norte">
-                        <h1>NORTE</h1>
-                        <p>Amazônia, rios e <br>
-                            sabores exôticos.</p>
-                    </div>
-                    <figure>
-                        <img src="assets/card_norte.png" alt="">
-                    </figure>
-                    <a href="pratos_norte.html" class="bt-norte">
-                        Ver Pratos <span class="seta">➜</span>
-                    </a>
+            <div class="card-norte">
+                <div class="texto-norte">
+                    <h1>NORTE</h1>
+                    <p>Amazônia, rios e <br>sabores exóticos.</p>
                 </div>
-                <div class="card-nordeste">
-                    <div class="texto-nordeste">
-                        <h1>NORDESTE</h1>
-                        <p>Praias, coco e <br>
-                            temperos marcantes.</p>
-                    </div>
-                    <figure>
-                        <img src="assets/card_nordeste.png" alt="">
-                    </figure>
-                    <a href="pratos_nordeste.html" class="bt-nordeste">
-                        Ver Pratos <span class="seta">➜</span>
-                    </a>
+                <figure><img src="assets/card_norte.png" alt=""></figure>
+                <a href="pratos_norte.html" class="bt-norte">Ver Pratos <span class="seta">➜</span></a>
+            </div>
+            <div class="card-nordeste">
+                <div class="texto-nordeste">
+                    <h1>NORDESTE</h1>
+                    <p>Praias, coco e <br>temperos marcantes.</p>
                 </div>
-
-                <div class="card-centro-oeste">
-                    <div class="texto-centro-oeste">
-                        <h1>CENTRO<BR>
-                            OESTE</h1>
-                        <p>Pantanal, cerrado e <br>
-                            sabores da terra.</p>
-                    </div>
-                    <figure>
-                        <img src="assets/card-centro-oeste.png" alt="">
-                    </figure>
-                    <a href="pratos_centro-oeste.html" class="bt-centro-oeste">
-                        Ver Pratos <span class="seta">➜</span>
-                    </a>
+                <figure><img src="assets/card_nordeste.png" alt=""></figure>
+                <a href="pratos_nordeste.html" class="bt-nordeste">Ver Pratos <span class="seta">➜</span></a>
+            </div>
+            <div class="card-centro-oeste">
+                <div class="texto-centro-oeste">
+                    <h1>CENTRO<br>OESTE</h1>
+                    <p>Pantanal, cerrado e <br>sabores da terra.</p>
                 </div>
-
-                <div class="card-sudeste">
-                    <div class="texto-sudeste">
-                        <h1>SUDESTE</h1>
-                        <p>Cidades, tradição e <br>
-                            sabores caseiros.</p>
-                    </div>
-                    <figure>
-                        <img src="assets/card_sudeste.png" alt="">
-                    </figure>
-                    <a href="pratos_sudeste.html" class="bt-sudeste">
-                        Ver Pratos <span class="seta">➜</span>
-                    </a>
+                <figure><img src="assets/card-centro-oeste.png" alt=""></figure>
+                <a href="pratos_centro-oeste.html" class="bt-centro-oeste">Ver Pratos <span class="seta">➜</span></a>
+            </div>
+            <div class="card-sudeste">
+                <div class="texto-sudeste">
+                    <h1>SUDESTE</h1>
+                    <p>Cidades, tradição e <br>sabores caseiros.</p>
                 </div>
-
-                <div class="card-sul">
-                    <div class="texto-sul">
-                        <h1>SUL</h1>
-                        <p>Campos, tradição e <br>
-                            sabores da fronteira.</p>
-                    </div>
-                    <figure>
-                        <img src="assets/card_sul.png" alt="">
-                    </figure>
-                    <a href="pratos_sul.html" class="bt-sul">
-                        Ver Pratos <span class="seta">➜</span>
-                    </a>
+                <figure><img src="assets/card_sudeste.png" alt=""></figure>
+                <a href="pratos_sudeste.html" class="bt-sudeste">Ver Pratos <span class="seta">➜</span></a>
+            </div>
+            <div class="card-sul">
+                <div class="texto-sul">
+                    <h1>SUL</h1>
+                    <p>Campos, tradição e <br>sabores da fronteira.</p>
                 </div>
+                <figure><img src="assets/card_sul.png" alt=""></figure>
+                <a href="pratos_sul.html" class="bt-sul">Ver Pratos <span class="seta">➜</span></a>
+            </div>
             </div>
         </section>
 
         <section id="famosas">
             <div class="icon-famosas">
                 <span></span>
-                <figure>
-                    <img src="assets/icon-famosas.png" alt="">
-                </figure>
+                <figure><img src="assets/icon-famosas.png" alt=""></figure>
                 <span></span>
             </div>
             <div class="titulo">
@@ -154,107 +97,223 @@
                 <h1>🇧🇷 Sabores que conquistaram o Brasil</h1>
                 <span></span>
             </div>
-
             <div class="card-container-famosas">
-                <div class="card-famosas">
-                    <div class="cards">
-                        <figure><img src="assets/Pinhão.webp" alt=""></figure>
-                        <h2>Brigadeiro</h2>
-                        <h4>Sudeste</h4>
-                        <button onclick="abrirModal('modalfamosas')">Conheça mais →</button>
-                    </div>
-
-                </div>
-                <div class="card-famosas">
-                    <div class="cards">
-                        <figure><img src="assets/Pinhão.webp" alt=""></figure>
-                        <h2>Brigadeiro</h2>
-                        <h4>Sudeste</h4>
-                        <button onclick="abrirModal('modalfamosas')">Conheça mais →</button>
-                    </div>
-
-                </div>
-                <div class="card-famosas">
-                    <div class="cards">
-                        <figure><img src="assets/Pinhão.webp" alt=""></figure>
-                        <h2>Brigadeiro</h2>
-                        <h4>Sudeste</h4>
-                        <button onclick="abrirModal('modalfamosas')">Conheça mais →</button>
-                    </div>
-
-                </div>
-                <div class="card-famosas">
-                    <div class="cards">
-                        <figure><img src="assets/Pinhão.webp" alt=""></figure>
-                        <h2>Brigadeiro</h2>
-                        <h4>Sudeste</h4>
-                        <button onclick="abrirModal('modalfamosas')">Conheça mais →</button>
-                    </div>
-
-                </div>
-                <div class="card-famosas">
-                    <div class="cards">
-                        <figure><img src="assets/Pinhão.webp" alt=""></figure>
-                        <h2>Brigadeiro</h2>
-                        <h4>Sudeste</h4>
-                        <button onclick="abrirModal('modalfamosas')">Conheça mais →</button>
-                    </div>
-
+            <div class="card-famosas">
+                <div class="cards">
+                    <figure><img src="assets/brigadeiro.webp" alt="Brigadeiro"></figure>
+                    <h2>Brigadeiro</h2>
+                    <h4>Sudeste</h4>
+                    <button onclick="abrirModal('modal-brigadeiro')">Conheça mais →</button>
                 </div>
             </div>
-        </section>
-
-    
-
+            <div class="card-famosas">
+                <div class="cards">
+                    <figure><img src="assets/coxinha.webp" alt="Coxinha"></figure>
+                    <h2>Coxinha</h2>
+                    <h4>Sudeste</h4>
+                    <button onclick="abrirModal('modal-coxinha')">Conheça mais →</button>
+                </div>
+            </div>
+            <div class="card-famosas">
+                <div class="cards">
+                    <figure><img src="assets/pastel.webp" alt="Pastel de Feira"></figure>
+                    <h2>Pastel de Feira</h2>
+                    <h4>Sudeste</h4>
+                    <button onclick="abrirModal('modal-pastel')">Conheça mais →</button>
+                </div>
+            </div>
+            <div class="card-famosas">
+                <div class="cards">
+                    <figure><img src="assets/tapioca.webp" alt="Tapioca"></figure>
+                    <h2>Tapioca</h2>
+                    <h4>Norte e Nordeste</h4>
+                    <button onclick="abrirModal('modal-tapioca')">Conheça mais →</button>
+                </div>
+            </div>
+            <div class="card-famosas">
+                <div class="cards">
+                    <figure><img src="assets/bolo-de-rolo.webp" alt="Bolo de Rolo"></figure>
+                    <h2>Bolo de Rolo</h2>
+                    <h4>Nordeste</h4>
+                    <button onclick="abrirModal('modal-bolo-de-rolo')">Conheça mais →</button>
+                </div>
+            </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="logo-f">
-            <figure>
-                <img src="assets/logo.png" alt="Logo Brasil em sabores.">
-            </figure>
-
-            <h2>Uma viagem gastronômica<br>
-                por cinco regiões.</h2>
-
+    <footer class="rodape">
+        <div class="rodape-faixa"></div>
+        <div class="rodape-conteudo">
+            <div class="rodape-marca">
+                <figure><img src="assets/logo.png" alt="Logo Brasil em Sabores"></figure>
+                <p>Uma viagem gastronômica pelas cinco regiões do Brasil, celebrando ingredientes, tradições e histórias que vivem na mesa brasileira.</p>
+            </div>
+            <nav class="rodape-coluna">
+                <h3>Explore</h3>
+                <a href="#cardapio">Regiões</a>
+                <a href="#famosas">Destaques</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+            <nav class="rodape-coluna">
+                <h3>Regiões</h3>
+                <a href="pratos_norte.html">Norte</a>
+                <a href="pratos_nordeste.html">Nordeste</a>
+                <a href="pratos_centro-oeste.html">Centro-Oeste</a>
+                <a href="pratos_sudeste.html">Sudeste</a>
+                <a href="pratos_sul.html">Sul</a>
+            </nav>
         </div>
-
-        <div class="texto-f">
-            <h2>NAVEGAÇÃO</h2>
-            <ul>
-                <li>> Sabores</li>
-                <li>> Regiões</li>
-                <li>> Sobre</li>
-                <li>> Contato</li>
-            </ul>
-        </div>
-        <div class="texto-f2">
-            <h2>SIGA A GENTE</h2>
-            <ul>
-                <li>> Instagram</li>
-                <li>> Facebook</li>
-                <li>> WhatsApp</li>
-                <li>> Youtube</li>
-            </ul>
+        <div class="rodape-base">
+            <p>© 2026 Brasil em Sabores · Projeto educacional sem fins comerciais</p>
+            <a href="index.html" class="rodape-topo">Voltar ao topo ↑</a>
         </div>
     </footer>
 
-    <!-- MODAIS: -->
-
-    <div class="modal" id="modalTacaca5">
+    <!-- MODAIS -->
+    <div class="modal" id="modal-brigadeiro">
         <div class="modal-conteudo">
-            <button class="fechar" onclick="fecharModal('modalfamosas')">x</button>
-            <h2>Pinhão</h2>
-            <p>O pinhão é a semente da araucária, árvore característica da paisagem sulista. Seu consumo
-                possui raízes anteriores à imigração europeia, estando ligado aos povos indígenas que já
-                utilizavam a semente como alimento. Posteriormente, o pinhão foi incorporado a inúmeras
-                receitas da culinária regional.</p>
+            <button class="fechar" onclick="fecharModal('modal-brigadeiro')" aria-label="Fechar">×</button>
+            <h2>Brigadeiro</h2>
+            <span class="modal-regiao">Sudeste</span>
+            <h3>Ingredientes</h3>
+            <ul>
+                <li>1 lata de leite condensado</li>
+                <li>1 colher de sopa de manteiga</li>
+                <li>3 colheres de sopa de chocolate em pó</li>
+                <li>Granulado para finalizar</li>
+            </ul>
+            <h3>Modo de preparo</h3>
+            <ol>
+                <li>Misture o leite condensado, a manteiga e o chocolate em uma panela.</li>
+                <li>Cozinhe em fogo baixo, mexendo sempre.</li>
+                <li>Quando a mistura desgrudar do fundo da panela, desligue.</li>
+                <li>Deixe esfriar, faça pequenas bolinhas e passe no granulado.</li>
+            </ol>
+            <h3>🇧🇷 Importância</h3>
+            <p>O brigadeiro se tornou um dos doces mais populares do Brasil e representa a forte tradição de doces e confeitaria do Sudeste. A região possui uma culinária marcada pela mistura de diferentes influências culturais.</p>
         </div>
+    </div>
 
+    <div class="modal" id="modal-coxinha">
+        <div class="modal-conteudo">
+            <button class="fechar" onclick="fecharModal('modal-coxinha')" aria-label="Fechar">×</button>
+            <h2>Coxinha</h2>
+            <span class="modal-regiao">Sudeste</span>
+            <h3>Ingredientes</h3>
+            <h4>Massa</h4>
+            <ul>
+                <li>2 xícaras de farinha de trigo</li>
+                <li>2 xícaras de caldo de frango</li>
+                <li>1 colher de sopa de manteiga</li>
+                <li>Sal a gosto</li>
+            </ul>
+            <h4>Recheio</h4>
+            <ul>
+                <li>2 xícaras de frango cozido e desfiado</li>
+                <li>1/2 cebola picada</li>
+                <li>Tempero a gosto</li>
+            </ul>
+            <h4>Para empanar</h4>
+            <ul>
+                <li>1 ovo</li>
+                <li>Farinha de rosca</li>
+                <li>Óleo para fritar</li>
+            </ul>
+            <h3>Modo de preparo</h3>
+            <ol>
+                <li>Aqueça o caldo, a manteiga e o sal.</li>
+                <li>Acrescente a farinha de uma vez e mexa até formar uma massa.</li>
+                <li>Refogue o frango com a cebola e os temperos.</li>
+                <li>Abra pequenas porções da massa, coloque o recheio e modele.</li>
+                <li>Passe no ovo e na farinha de rosca.</li>
+                <li>Frite até dourar.</li>
+            </ol>
+            <h3>🇧🇷 Importância</h3>
+            <p>A coxinha se tornou um dos salgados mais presentes na alimentação cotidiana brasileira. Sua popularização acompanha a diversidade gastronômica do Sudeste e sua influência na culinária nacional.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-pastel">
+        <div class="modal-conteudo">
+            <button class="fechar" onclick="fecharModal('modal-pastel')" aria-label="Fechar">×</button>
+            <h2>Pastel de Feira</h2>
+            <span class="modal-regiao">Sudeste</span>
+            <h3>Ingredientes</h3>
+            <ul>
+                <li>Massa pronta para pastel</li>
+                <li>Carne moída ou outro recheio de sua preferência</li>
+                <li>1/2 cebola picada</li>
+                <li>Sal e temperos</li>
+                <li>Óleo para fritar</li>
+            </ul>
+            <h3>Modo de preparo</h3>
+            <ol>
+                <li>Refogue a carne com a cebola e os temperos.</li>
+                <li>Coloque o recheio sobre a massa.</li>
+                <li>Feche o pastel pressionando as bordas com um garfo.</li>
+                <li>Frite em óleo quente até ficar dourado.</li>
+                <li>Escorra e sirva.</li>
+            </ol>
+            <h3>🇧🇷 Importância</h3>
+            <p>O pastel tornou-se um dos alimentos mais associados às feiras e à alimentação popular brasileira. É um exemplo de como preparações presentes no Sudeste ganharam espaço em diferentes partes do país.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-tapioca">
+        <div class="modal-conteudo">
+            <button class="fechar" onclick="fecharModal('modal-tapioca')" aria-label="Fechar">×</button>
+            <h2>Tapioca</h2>
+            <span class="modal-regiao">Norte e Nordeste</span>
+            <h3>Ingredientes</h3>
+            <ul>
+                <li>1 xícara de goma de tapioca hidratada</li>
+                <li>Uma pitada de sal</li>
+                <li>Recheio a gosto: queijo, coco, carne, frango ou outros</li>
+            </ul>
+            <h3>Modo de preparo</h3>
+            <ol>
+                <li>Aqueça uma frigideira em fogo médio.</li>
+                <li>Espalhe a goma formando uma camada fina.</li>
+                <li>Deixe cozinhar até a massa ficar unida.</li>
+                <li>Adicione o recheio.</li>
+                <li>Dobre ao meio e sirva.</li>
+            </ol>
+            <h3>🇧🇷 Importância</h3>
+            <p>A tapioca tem relação direta com a mandioca e os conhecimentos indígenas, ingredientes e saberes fundamentais da culinária brasileira. A mandioca aparece como elemento importante nas tradições alimentares do Norte e Nordeste.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-bolo-de-rolo">
+        <div class="modal-conteudo">
+            <button class="fechar" onclick="fecharModal('modal-bolo-de-rolo')" aria-label="Fechar">×</button>
+            <h2>Bolo de Rolo</h2>
+            <span class="modal-regiao">Nordeste</span>
+            <h3>Ingredientes</h3>
+            <ul>
+                <li>250 g de manteiga</li>
+                <li>250 g de açúcar</li>
+                <li>5 ovos</li>
+                <li>250 g de farinha de trigo</li>
+                <li>300 g de goiabada</li>
+                <li>Um pouco de água</li>
+            </ul>
+            <h3>Modo de preparo</h3>
+            <ol>
+                <li>Bata a manteiga e o açúcar até formar um creme.</li>
+                <li>Acrescente os ovos e misture.</li>
+                <li>Adicione a farinha e misture até formar uma massa.</li>
+                <li>Espalhe uma camada bem fina em uma assadeira.</li>
+                <li>Asse rapidamente.</li>
+                <li>Passe uma camada fina de goiabada derretida.</li>
+                <li>Enrole a massa cuidadosamente.</li>
+                <li>Repita o processo, colocando uma nova camada sobre o rolo até formar várias camadas.</li>
+            </ol>
+            <h3>🇧🇷 Importância</h3>
+            <p>O bolo de rolo é um dos doces mais associados à culinária pernambucana e representa a diversidade cultural da cozinha nordestina, marcada pela influência indígena, africana e portuguesa.</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
